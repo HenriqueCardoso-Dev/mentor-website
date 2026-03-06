@@ -5,38 +5,89 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* ── SPLASH CONTAINER ── */
+.splash {
+  position: relative; z-index: 10;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 40px 24px;
+  text-align: center;
+  animation: splashIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@keyframes splashIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.brand {
+  margin-bottom: 12px;
+}
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+.brand-tagline {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 8px;
+}
+
+.divider-line {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25), transparent);
+  margin: 28px auto;
+}
+
+.splash-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* ── FOOTER NOTE ── */
+.splash-footer {
+  margin-top: 36px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.05em;
+  animation: splashIn 0.9s 0.6s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+@media (max-width: 560px) {
+  body { overflow-y: auto; }
+  html, body { height: auto; }
+  .cards { grid-template-columns: 1fr; max-width: 360px; }
+  .profile-card { padding: 32px 28px; }
+  .card-title { font-size: 1.5rem; }
+}
+
+@media screen and (max-width: 720px) {
+  .cards {
+    grid-template-columns: 1fr;
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 450px) {
+  .cards {
+    min-width: none;
+    width: 60%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
