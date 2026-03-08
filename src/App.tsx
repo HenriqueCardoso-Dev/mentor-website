@@ -25,7 +25,7 @@ function App() {
           <SplashCard title='Para profissionais' subTitle='Sou Psicólogo(a)' description='Quero conhecer os espaços, locação de salas e como fazer parte da rede Claramente.' icon={professionalIcon} link='/profissionais' linkTitle='Quero fazer parte' typecard='professional'/>
         </div>
 
-        <p className="splash-footer">© 2025 Claramente Clínica de Psicologia · CRP registrado </p>
+        <p className="splash-footer">© 2025 Claramente Clínica de Psicologia · CRP registrado</p>
       </div>
     </>
   )
