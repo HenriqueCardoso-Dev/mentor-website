@@ -8,6 +8,7 @@
   letter-spacing: 0.05em;
   transition: color 0.3s;
   padding: 8px 0;
+  max-width: max-content;
 }
 
 .back-btn svg {

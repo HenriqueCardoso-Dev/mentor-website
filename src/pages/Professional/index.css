@@ -1,0 +1,7 @@
+.panel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: oklch(76.5% 0.177 163.223);
+  box-shadow: 0 0 8px rgba(120, 191, 160, 0.5);
+}
