@@ -1,4 +1,4 @@
-import { ReactNode, ButtonHTMLAttributes } from 'react';
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
 export default function Button({ children, className }: { children: ReactNode } & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
