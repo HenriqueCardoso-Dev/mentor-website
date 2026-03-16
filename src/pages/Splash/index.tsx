@@ -1,5 +1,6 @@
 import { patientIcon, professionalIcon } from "../../components/FakeSVGIcons";
 import SplashCard from "../../components/ui/SplashCard";
+import "./index.css";
 
 export default function SplashPage() {
   return (

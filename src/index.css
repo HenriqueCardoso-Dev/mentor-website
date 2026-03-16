@@ -13,18 +13,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --sage: #78BFA0;
+  --deep: #0f0a1e;
+  --dark: #1a1030;
+  --lavender: #A08BC8;
 }
 
-.splash {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 24px;
-  text-align: center;
-  animation: splashIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
 
 body {
   background: #1a0f2e;
@@ -32,7 +27,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  position: relative;
   overflow-x: hidden;
 }
 

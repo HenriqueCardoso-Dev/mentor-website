@@ -6,17 +6,22 @@ import {LessonIcon} from "../../components/ui/svg/LessonIcon";
 import {UserIcon} from "../../components/ui/svg/UserIcon";
 import WhatsappButton from "../../components/ui/WhatsappButton";
 import "./index.css";
+import { HomeIcon } from "../../components/ui/svg/HomeIcon";
+import { LocationIcon } from "../../components/ui/svg/LocationIcon";
+import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
+import BenefitsCard from "../../components/ui/BenefitsCard";
+import { ClockIcon } from "../../components/ui/svg/ClockIcon";
+import { SubscriptionCard } from "../../components/ui/SubscriptionCard";
 
 export default function ProfessionalPage() {
   return (
     <>
       <NavigationMenu />
-      <div className="h-[100vh] w-[100vw] bg-[#0f0a1e]"></div>
     
-      <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center gap-50 mt-15">
+      <section className=" w-full flex items-center justify-center gap-60 hero">
         <aside className="w-full max-w-[600px] text-start">
-          <h5 className="tracking-[.08rem] text-emerald-300 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
-          <h1 className="font-[Cormorant_Garamond] text-[4.6rem]">Seu consultório, <br /> no lugar <span>certo</span></h1>
+          <h5 className="text-emerald-300 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
+          <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-300 ">certo</i></h1>
 
           <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
@@ -44,7 +49,7 @@ export default function ProfessionalPage() {
           </div>
         </aside>
 
-        <div className="w-[380px] rounded-[32px] flex flex-col p-[36px] text-gray-400 gap-6 border-1">
+        <div className="hero-panel w-[380px] rounded-[32px] flex flex-col p-[36px] text-gray-400 gap-6 border-1">
           <p className="flex items-center justify-center gap-2 text-sm font-bold">
             <div className="panel-dot"/>
             Painel do Profissional - Claramente
@@ -78,6 +83,103 @@ export default function ProfessionalPage() {
 
         </div>
         
+      </section>  
+
+      {/* Benefits Section */}
+      <section className="py-[110px] px-[48px] w-[100vw] z-100 benefits flex flex-col items-center">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col items-start text-start w-full">
+            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
+          </div>
+          <div className="flex gap-6">
+            <BenefitsCard
+              icon={<HomeIcon />}
+              title="Salas Equipadas"
+              description="Consultórios mobiliados, climatizados e com isolamento acústico. Tudo pronto para você atender com conforto e profissionalismo."
+            />
+
+            <BenefitsCard
+              icon={<LocationIcon />}
+              title="Endereço Profissional"
+              description="Use o endereço da Claramente no seu CRP e materiais de divulgação. Credibilidade e localização privilegiada em Itaquaquecetuba."
+            />
+
+            <BenefitsCard
+              icon={<PlanetIcon />}
+              title="Rede Credenciada"
+              description="Faça parte da rede Claramente e receba indicações de pacientes. Aqui, seu perfil fica visível para quem busca atendimento psicológico de qualidade."
+            />
+
+            <BenefitsCard
+              icon={<LessonIcon />}
+              title="Supervisão Clínica"
+              description="Grupos e supervisões individuais regulares para aprimoramento contínuo da sua prática clínica com suporte especializado dos nossos profissionais."
+            />
+          </div>
+        </div>
+      </section>
+
+      
+      {/* subscription Section */}
+      <section className="subscription py-[110px] px-[48px] w-[100vw] z-100 flex flex-col items-center">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col items-start text-start w-full gap-5">
+            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
+
+            <h6 className="text-xs text-gray-400">Flexibilidade para locar por hora, por período ou com pacote mensal. Sem burocracia, sem vínculo empregatício.</h6>
+          </div>
+
+
+          <div className="flex gap-6">
+            <SubscriptionCard
+              icon={<ClockIcon />}
+              frequency="Avulso"
+              frequencyDescription="Por hora · sem compromisso"
+              price="Consultar"
+              benefits={[
+                "Reserva pelo WhatsApp",
+                "Sala com mobiliário completo",
+                "Climatização e isolamento acústico",
+                "Wi-fi incluso",
+                "Confirmação imediata de disponibilidade"
+              ]}
+              buttonText="Consultar disponibilidade"
+            />
+
+            <SubscriptionCard
+              icon={<ClockIcon />}
+              frequency="Avulso"
+              frequencyDescription="Por hora · sem compromisso"
+              price="Consultar"
+              benefits={[
+                "Reserva pelo WhatsApp",
+                "Sala com mobiliário completo",
+                "Climatização e isolamento acústico",
+                "Wi-fi incluso",
+                "Confirmação imediata de disponibilidade"
+              ]}
+              buttonText="Consultar disponibilidade"
+              isPremium={true}
+            />
+
+            <SubscriptionCard
+              icon={<ClockIcon />}
+              frequency="Avulso"
+              frequencyDescription="Por hora · sem compromisso"
+              price="Consultar"
+              benefits={[
+                "Reserva pelo WhatsApp",
+                "Sala com mobiliário completo",
+                "Climatização e isolamento acústico",
+                "Wi-fi incluso",
+                "Confirmação imediata de disponibilidade"
+              ]}
+              buttonText="Consultar disponibilidade"
+            />
+          </div>
+        </div>
       </section>
     </>
   )
