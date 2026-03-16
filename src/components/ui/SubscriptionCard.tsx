@@ -1,5 +1,4 @@
 import type { JSX } from "react";
-import Button from "./Button";
 import "./../styles/SubscriptionCard.css";
 
 interface SubscriptionCardProps {
