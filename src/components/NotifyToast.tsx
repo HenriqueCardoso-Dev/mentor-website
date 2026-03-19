@@ -20,7 +20,7 @@ export default function NotifyToast({
   const color = status ? 'emerald' : 'red';
 
   return (
-    <div className="border-1 rounded-2xl p-[15px] flex items-center text-xs gap-5">
+    <div className="border-1 rounded-2xl p-[15px] flex items-center text-xs gap-5 justify-between notify-bg">
       <div className={`status-bg-${color} max-w-[40px] h-[35px] w-full rounded-lg flex items-center justify-center p-[10px]`}>
         {icon}
       </div>

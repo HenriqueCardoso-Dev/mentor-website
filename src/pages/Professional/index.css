@@ -1,7 +1,33 @@
+.benefits {
+  background-color: var(--dark);
+}
+
+.subscription {
+  background-color: var(--deep);
+}
+
+.benefit-desc {
+  font-weight: 300;
+  line-height: 1.75;
+}
+
 .panel-dot {
-  width: 10px;
+  width: 10px;  
   height: 10px;
   border-radius: 50%;
   background: oklch(76.5% 0.177 163.223);
   box-shadow: 0 0 8px rgba(120, 191, 160, 0.5);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 48px 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-panel {
+  background-color: rgba(255, 255, 255, 0.04);
 }
