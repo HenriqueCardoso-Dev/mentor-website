@@ -2,8 +2,12 @@
   background-color: var(--dark);
 }
 
-.subscription {
+.deep-bg {
   background-color: var(--deep);
+}
+
+.dark-bg {
+  background-color: var(--dark);
 }
 
 .benefit-desc {
