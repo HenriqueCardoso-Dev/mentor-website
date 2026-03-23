@@ -16,7 +16,7 @@ export default function BrowserScreen({width, height, search, content} : Browser
   }
 
   return (
-    <div style={{...style}} className="deep-bg rounded-3xl border-1 border-gray-800">
+    <div style={{...style}} className="deep-bg rounded-3xl border-1 border-gray-800 browser-screen">
       <div className="browserheader flex py-4 px-6 gap-6 items-center rounded-t-3xl border-b-1 border-gray-800">
         <div className="screen-dots flex gap-2">
               <div className="screen-dot bg-red-400"></div>
