@@ -4,14 +4,24 @@ import './styles/MoreInformationForm.css';
 import Button from "./ui/Button";
 import { whatsappIcon } from "./FakeSVGIcons";
 
+interface FormData {
+  firstName: string;
+  crp: string;
+  phone: string;
+  interest: string;
+  message: string;
+}
+
 export default function MoreInformationForm() {
 
-  const { register, handleSubmit } = useForm();
-  const [data, setData] = useState("");
+  const { register, handleSubmit } = useForm<FormData>();
+  const [data, setData] = useState<FormData>();
 
-  const onSubmit = (formData) => {
+  const onSubmit = (formData: FormData) => {
     setData(formData);
+    console.log(formData);
     console.log(data);
+    
     // Adicione lógica para enviar os dados, como abrir WhatsApp
   };
 
