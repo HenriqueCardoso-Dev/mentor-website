@@ -1,4 +1,4 @@
-import './../styles/DescriptionCard.scss';
+import './../styles/DescriptionCard.css';
 
 interface DescriptionCard {
   number: string;

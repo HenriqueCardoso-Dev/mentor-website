@@ -8,8 +8,6 @@
   border-color: rgba(120,191,160,0.15);
 }
 
-.numeric-description-card:hover {
-  .description-number {
-    opacity: 100%;
-  }
+.numeric-description-card:hover .description-number{
+  opacity: 100%;
 }

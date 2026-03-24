@@ -28,16 +28,16 @@ export default function ProfessionalPage() {
       <NavigationMenu />
     
       <section className=" w-full flex items-center justify-center gap-60 hero">
-        <aside className="w-full max-w-[600px] text-start">
+        <aside className="w-full max-w-150 text-start">
           <h5 className="text-emerald-300 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
           <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-300 ">certo</i></h1>
 
           <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
-          <div className="mt-9 flex gap-6 border-b-1 border-gray-700 mb-10 pb-15">
+          <div className="mt-9 flex gap-6 border-b border-gray-700 mb-10 pb-15">
             <WhatsappButton/>
 
-            <Button className="py-[16px] px-[32px] max-w-max items-center rounded-full border border-gray-600 text-gray-300 text-sm">
+            <Button className="py-4 px-8 max-w-max items-center rounded-full border border-gray-600 text-gray-300 text-sm">
               Ver planos de salas
             </Button>
           </div>
@@ -58,13 +58,13 @@ export default function ProfessionalPage() {
           </div>
         </aside>
 
-        <div className="hero-panel w-[380px] rounded-[32px] flex flex-col p-[36px] text-gray-400 gap-6 border-1">
+        <div className="hero-panel w-95 rounded-4xl flex flex-col p-9 text-gray-400 gap-6 border">
           <p className="flex items-center justify-center gap-2 text-sm font-bold">
             <div className="panel-dot"/>
             Painel do Profissional - Claramente
           </p>
 
-          <div className="border-b-1 w-full"></div>
+          <div className="border-b w-full"></div>
 
           <NotifyToast 
             icon={<ScheduleIcon />}
@@ -95,7 +95,7 @@ export default function ProfessionalPage() {
       </section>  
 
       {/* Benefits Section */}
-      <section className="py-[110px] px-[48px] w-[100vw] z-100 benefits flex flex-col items-center">
+      <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full">
             <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
@@ -194,8 +194,8 @@ export default function ProfessionalPage() {
       </section>
 
       {/* claramente preview section */}
-      <section className="cred-section py-[110px] px-[48px] w-[100vw] z-100 flex justify-center items-center">
-        <div className="w-full max-w-[1200px] gap-20 flex items-center justify-center">
+      <section className="cred-section py-27.5 px-12 w-screen z-100 flex justify-center items-center">
+        <div className="w-full max-w-300 gap-20 flex items-center justify-center">
           <BrowserScreen 
             width={'100%'} 
             height={'100%'} 
@@ -203,7 +203,7 @@ export default function ProfessionalPage() {
             content={<ContentBrowserScreen/>}
           />
 
-          <aside className="w-full max-w-[600px] text-start">
+          <aside className="w-full max-w-150 text-start">
             <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Rede Claramente</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Seu perfil visível para
               <br /><i className="text-(--lavender)">quem está buscando</i>
@@ -240,7 +240,7 @@ export default function ProfessionalPage() {
                 </Button>
               </a>
 
-              <Button className="border-1 border-gray-800 py-4 px-8 rounded-full hover:border-gray-700">
+              <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700">
                 Tirar dúvidas
               </Button>
             </div>
@@ -250,7 +250,7 @@ export default function ProfessionalPage() {
       </section>
 
       <section className="dark-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center">
-        <div className="w-full max-w-[1200px] flex justify-between items-center">
+        <div className="w-full max-w-300 flex justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
               <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>

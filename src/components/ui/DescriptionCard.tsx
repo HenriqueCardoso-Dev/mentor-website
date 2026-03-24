@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import './../styles/DescriptionCard.scss';
+import './../styles/DescriptionCard.css';
 
 interface DescriptionCard {
   icon: JSX.Element;
