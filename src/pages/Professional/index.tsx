@@ -21,6 +21,11 @@ import { LinkIcon } from "../../components/ui/svg/LinkIcon";
 import { StarIcon } from "../../components/ui/svg/StarIcon";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
 import QuoteCard from "../../components/ui/QuoteCard";
+import { whatsappIcon } from "../../components/FakeSVGIcons";
+import MoreInformationForm from "../../components/MoreInformationForm";
+import SocialCard from "../../components/ui/SocialCard";
+import { WhatsAppIcon as WppIcon } from "../../components/ui/svg/WhatsAppIcon";
+import { InstagramIcon } from "../../components/ui/svg/InstagramIcon";
 
 export default function ProfessionalPage() {
   return (
@@ -240,7 +245,7 @@ export default function ProfessionalPage() {
                 </Button>
               </a>
 
-              <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700">
+              <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
                 Tirar dúvidas
               </Button>
             </div>
@@ -249,7 +254,7 @@ export default function ProfessionalPage() {
         </div>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center">
+      <section className="dark-bg py-27.5 px-12 w-screen z-100 flex flex-col items-center">
         <div className="w-full max-w-300 flex justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
@@ -289,6 +294,72 @@ export default function ProfessionalPage() {
           </aside>
         </div>
         
+      </section>
+
+      <section className="deep-bg py-27.5 px-12 w-screen flex flex-col items-center cta-section">
+        <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">
+          Pronto para fazer <br />
+          parte da <i className="text-emerald-200 ">Claramente</i>?
+        </h1>
+        <p className="leading-[1.85] text-gray-400 mt-4 max-w-120">Entre em contato pelo WhatsApp e vamos encontrar juntos o melhor caminho para você começar a atender na clínica.</p>
+
+        <div className="flex mt-12 gap-4">
+          <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
+            <Button className="bg-green-300 flex gap-3 py-4 px-8 max-w-max items-center rounded-full text-black text-sm cursor-pointer font-semibold">
+              <div className="h-4 w-4">
+                <svg
+                  style={{width: '18px', height: '18px'}}
+                  viewBox={whatsappIcon.viewBox} 
+                  fill={whatsappIcon.fill} 
+                >
+                  <path d={whatsappIcon.d} />
+                </svg>
+              </div>
+
+              Quero saber mais
+            </Button>
+          </a>
+
+          <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
+            Acessar a plataforma
+          </Button>
+        </div>
+      </section>
+
+      <section className="dark-bg py-27.5 px-12 w-screen flex flex-col items-center ">
+        <div className="w-full max-w-300 flex justify-between">
+          <MoreInformationForm/>
+
+          <aside className="w-full max-w-140 text-start">
+            <h4 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Contato Direto</h4>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
+            </h1>
+
+            <p className="leading-[1.85] text-gray-400 mt-4 mb-12">Tem alguma dúvida? Quer visitar o espaço? Entre em contato e agendamos uma visita sem compromisso.</p>
+
+            <div className="flex flex-col gap-4">
+              <SocialCard
+                icon={<WppIcon/>}
+                label="WhatsApp"
+                content="(11) 9828-2179"
+              />
+              
+              <SocialCard
+                icon={<InstagramIcon/>}
+                label="Instagram"
+                content="@claramente_itaqua"
+              />
+              <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
+                <SocialCard
+                  icon={<LinkIcon/>}
+                  label="Plataforma Claramente"
+                  content="Acessar o sistema"
+                />
+              </a>
+            </div>
+
+          </aside>
+        </div>
       </section>
     </>
   )

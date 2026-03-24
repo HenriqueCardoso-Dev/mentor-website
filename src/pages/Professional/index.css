@@ -39,3 +39,21 @@
 .cred-section {
   background: linear-gradient(160deg, var(--dark) 0%, rgba(26, 16, 48, 0.9) 50%, var(--deep) 100%);
 }
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107, 79, 160, 0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
