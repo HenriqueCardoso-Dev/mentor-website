@@ -2,15 +2,64 @@ import { whatsappIcon } from "../FakeSVGIcons";
 
 export default function WhatsappButton() {
   return (
-    <div className="bg-green-300 flex gap-3 py-[16px] px-[32px] max-w-max items-center rounded-full text-black text-sm cursor-pointer">
-      <svg
-        style={{width: '18px', height: '18px'}}
-        viewBox={whatsappIcon.viewBox} 
-        fill={whatsappIcon.fill} 
+    <button
+      className="
+        group
+        relative
+        overflow-hidden
+        flex
+        items-center
+        gap-3
+        rounded-full
+        bg-green-300
+        px-[32px]
+        py-[16px]
+        text-sm
+        text-black
+        cursor-pointer
+      "
+    >
+      <span
+        className="
+          absolute
+          inset-0
+          bg-green-400
+          opacity-0
+          transition-all
+          duration-500
+          group-hover:opacity-100
+        "
+      />
+
+      <div
+        className="
+          relative
+          transition-all
+          duration-500
+          group-hover:scale-110
+           group-hover:text-white
+        "
       >
-        <path d={whatsappIcon.d} />
-      </svg>
-      Falar pelo WhatsApp
-    </div>
-  )
+        <svg
+          style={{ width: "18px", height: "18px" }}
+          viewBox={whatsappIcon.viewBox}
+          fill={whatsappIcon.fill}
+        >
+          <path d={whatsappIcon.d} />
+        </svg>
+      </div>
+
+      <span
+        className="
+          relative
+          transition-all
+          duration-500
+          group-hover:tracking-wide
+          group-hover:text-white
+        "
+      >
+        Falar pelo WhatsApp
+      </span>
+    </button>
+  );
 }
