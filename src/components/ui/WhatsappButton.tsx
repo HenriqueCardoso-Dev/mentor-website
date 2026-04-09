@@ -1,9 +1,14 @@
 import { whatsappIcon } from "../FakeSVGIcons";
 
-export default function WhatsappButton() {
+interface WhatsappButtonProps {
+  label ?: string;  
+  className ?: string;
+}
+
+export default function WhatsappButton({ label = "Falar pelo WhatsApp", className}: WhatsappButtonProps ) {
   return (
     <button
-      className="
+      className={`
         group
         relative
         overflow-hidden
@@ -17,7 +22,8 @@ export default function WhatsappButton() {
         text-sm
         text-black
         cursor-pointer
-      "
+        ${className || ''}
+      `}
     >
       <span
         className="
@@ -58,7 +64,7 @@ export default function WhatsappButton() {
           group-hover:text-white
         "
       >
-        Falar pelo WhatsApp
+        {label}
       </span>
     </button>
   );
