@@ -341,7 +341,7 @@ export default function ProfessionalPage() {
               <SocialCard
                 icon={<WppIcon/>}
                 label="WhatsApp"
-                content="(11) 9828-2179"
+                content="(11) 98282-9179"
               />
               
               <SocialCard

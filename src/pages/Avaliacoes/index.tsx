@@ -7,9 +7,10 @@ import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
 import BenefitsCard from "../../components/ui/BenefitsCard";
 import MegaMenu from "../../components/ui/MegaMenu";
 import { WhatsAppIcon } from "../../components/ui/svg/WhatsAppIcon";
-import { Clock4Icon, FileTextIcon, HeartIcon, LockKeyholeIcon, ShieldCheckIcon, SignatureIcon, SmileIcon, User2 } from "lucide-react";
+import { BookOpen, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
 import Badge from "../../components/ui/Badge";
 import SpecCard from "../../components/ui/SpecCard";
+import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
 
 export default function Avaliacoes() {
   return (
@@ -22,11 +23,11 @@ export default function Avaliacoes() {
           <p className="text-xs uppercase">clínica de psicologia</p>
         </div>
 
-          <a href="https://wa.me/551198282179" target="_blank" rel="noopener" className="flex items-center font-semibold">
+          <a href="https://wa.me/5511982829179" target="_blank" rel="noopener" className="flex items-center font-semibold">
             <span className="flex h-5 me-3">
               <WhatsAppIcon fill="#6b4fa0"/>
             </span>
-            (11) 9828-2179
+            (11) 98282-9179
           </a>
       </header>
 
@@ -147,6 +148,104 @@ export default function Avaliacoes() {
           </div>
         </div>
       </section>
+
+      {/* Nossos diferenciais */}
+      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-white">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col justify-center text-center w-full">
+            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <ShieldCheckIcon size={20} />
+                </div>
+              }
+              title="Laudo com validade legal"
+              description="Documento técnico emitido por profissional registrado no CRP, com validade para uso clínico, educacional, jurídico e previdenciário."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <FlaskConical size={20} />
+                </div>
+              }
+              title="Instrumentos validados pelo CFP"
+              description="Utilizamos apenas testes aprovados pelo Conselho Federal de Psicologia, com normas atualizadas para a população brasileira."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <User size={20} />
+                </div>
+              }
+              title="Atendimento humanizado"
+              description="Ambiente seguro e acolhedor. Cada avaliação é conduzida com respeito ao ritmo, história e necessidade singular de cada pessoa."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <LaptopMinimal  size={20} />
+                </div>
+              }
+              title="Presencial e online"
+              description="Realizamos avaliações presencialmente em Itaquaquecetuba ou de forma remota com a mesma qualidade e sigilo garantido."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <MessageSquareText size={20} />
+                </div>
+              }
+              title="Devolutiva completa"
+              description="Explicamos os resultados de forma clara para a família e paciente, com orientações práticas sobre os próximos passos e encaminhamentos."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-4 rounded-xl text-(--purple)">
+                  <BookOpen  size={20} />
+                </div>
+              }
+              title="Relatório multi-uso"
+              description="O laudo pode ser utilizado para escola, clínicas médicas, INSS, concursos, processos judiciais, planos de saúde e outros fins."
+            />
+          </div>
+
+          
+        </div>
+      </section>
+
 
     </>
   );
