@@ -7,10 +7,12 @@ import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
 import BenefitsCard from "../../components/ui/BenefitsCard";
 import MegaMenu from "../../components/ui/MegaMenu";
 import { WhatsAppIcon } from "../../components/ui/svg/WhatsAppIcon";
-import { BookOpen, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
+import { BookOpen, CircleQuestionMark, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, Section, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
 import Badge from "../../components/ui/Badge";
 import SpecCard from "../../components/ui/SpecCard";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
+import Button from "../../components/ui/Button";
+import FloaterButton from "../../components/ui/FloaterButton";
 
 export default function Avaliacoes() {
   return (
@@ -33,7 +35,7 @@ export default function Avaliacoes() {
 
       <section className=" w-full flex items-center justify-center gap-60 hero bg-(--cream)">
         <aside className="w-full max-w-[600px] text-start">
-          <h5 className="text-emerald-300 text-xs tracking-[0.25em]">
+          <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
             <span
             className="
               text-md
@@ -112,7 +114,7 @@ export default function Avaliacoes() {
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
               <span className="tracking-[-2px] me-2">---</span> Por que a
               Claramente
             </h5>
@@ -153,7 +155,7 @@ export default function Avaliacoes() {
       <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-white">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col justify-center text-center w-full">
-            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
           </div>
           <div className="grid grid-cols-2 gap-6">
@@ -241,12 +243,128 @@ export default function Avaliacoes() {
               description="O laudo pode ser utilizado para escola, clínicas médicas, INSS, concursos, processos judiciais, planos de saúde e outros fins."
             />
           </div>
-
-          
         </div>
       </section>
 
+      {/* Depoimentos */}
+      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-white">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col justify-center text-center w-full">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Depoimentos</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">A voz de quem confia no<br /><i className="text-(--purple)">Nosso trabalho</i></h1>
+          </div>
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
+        </div>
+        
+        <div className="flex mt-12">
+          <a href="https://www.google.com/search?hl=pt-BR&gl=br&q=Cl%C3%ADnica+Claramente+-+Itaquaquecetuba+-+Av.+Pres.+Tancredo+Neves,+363+-+Esta%C3%A7%C3%A3o,+Itaquaquecetuba+-+SP,+08571-000&ludocid=11938231275793748742&lsig=AB86z5XWv1-fRNaga6zkNUhpvsB1#lrd=0x94ce7d3cc7a69d15:0xa5ad1e1808251306,3" target="_blank" rel="noopener noreferrer">
+            <Button className="py-4 px-8 max-w-max rounded-full border text-(--lavender) text-sm">
+              Avalie no Google
+            </Button>
+          </a>
+        </div>
+        
+      </section>
+      
+      {/* Dúvidas frequentes */}
+      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-(--lavender-light)">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col items-start text-start w-full">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Dúvidas frequentes</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Perguntas que <i className="text-(--purple)">todo mundo faz</i></h1>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark size={15} />
+                </div>
+              }
+              title="Qual a diferença entre avaliação psicológica e neuropsicológica?"
+              description="A avaliação psicológica foca em aspectos emocionais, de personalidade e comportamento. A neuropsicológica avalia funções cognitivas como memória, atenção e raciocínio. Muitas vezes são realizadas juntas para um diagnóstico mais completo."
+            />
 
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark size={15} />
+                </div>
+              }
+              title="Quantas sessões são necessárias?"
+              description="Em geral, de 3 a 6 sessões, dependendo do objetivo da avaliação, da demanda do paciente e dos instrumentos utilizados. O número exato é definido após a entrevista inicial."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark size={15} />
+                </div>
+              }
+              title="O laudo tem validade legal?"
+              description="Sim. O laudo psicológico emitido por profissional registrado no CRP tem validade técnica, legal e jurídica, podendo ser utilizado em processos seletivos, escolares, médicos, judiciais e previdenciários."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark  size={15} />
+                </div>
+              }
+              title="Atende crianças pequenas?"
+              description="Sim. Realizamos avaliações a partir dos 4 anos de idade, com abordagem adaptada para cada faixa etária, incluindo instrumentos lúdicos e acolhedores para os pequenos."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark size={15} />
+                </div>
+              }
+              title="Posso fazer a avaliação de forma online?"
+              description="Sim. A avaliação pode ser realizada de forma remota, conforme as diretrizes do CFP para atendimento telepresencial, com a mesma qualidade e sigilo do atendimento presencial."
+            />
+
+            <NumericDescriptionCard
+              containerClass="bg-white border-gray-200"
+              titleClass="text-black"
+              descriptionClass="text-gray-500"
+              hoverClass="hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-300 hover:-translate-y-1"
+              icon={
+                <div className="bg-(--lavender-light) p-2 rounded-xl text-(--purple)">
+                  <CircleQuestionMark  size={15} />
+                </div>
+              }
+              title="Funciona pelo plano de saúde?"
+              description="No momento atendemos de forma particular. Entre em contato pelo WhatsApp para saber sobre formas de pagamento, parcelamento e valores disponíveis."
+            />
+          </div>
+        </div>
+      </section>
+
+      <FloaterButton 
+        phoneNumber="5511982829179" 
+      />
     </>
   );
 }
