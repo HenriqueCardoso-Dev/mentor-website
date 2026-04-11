@@ -7,7 +7,7 @@ import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
 import BenefitsCard from "../../components/ui/BenefitsCard";
 import MegaMenu from "../../components/ui/MegaMenu";
 import { WhatsAppIcon } from "../../components/ui/svg/WhatsAppIcon";
-import { BookOpen, CircleQuestionMark, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, Section, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
+import { BookOpen, CircleQuestionMark, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
 import Badge from "../../components/ui/Badge";
 import SpecCard from "../../components/ui/SpecCard";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
@@ -110,7 +110,7 @@ export default function Avaliacoes() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Indication Section */}
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
         <div className="flex flex-col gap-20 max-w-[1100px]">
           <div className="flex flex-col items-start text-start w-full">
@@ -152,6 +152,76 @@ export default function Avaliacoes() {
                 badges={['Alzheimer', 'Demência', 'Memória', 'Raciocínio', 'Atenção']}
                 watermark="yellow"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--warm) flex flex-col items-center">
+        <div className="flex gap-20 max-w-[1100px] items-center ">
+          <aside className="w-full max-w-[600px] text-start flex-1">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
+              <span className="tracking-[-2px] me-2">---</span> Como funciona
+            </h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.5rem] leading-[1.1] mt-6 text-(--deep) font-bold">
+              Um processo claro, <br />
+              <i className="text-(--purple)">do início ao laudo</i>
+            </h1>
+
+            <p className="leading-[1.85] text-sm text-(--muted) mt-4">
+              A avaliação psicológica é um processo estruturado, realizado por profissional registrado no CRP, com instrumentos validados e metodologia científica.
+            </p>
+
+            <div className="mt-9 flex gap-6 pb-6 flex-col">
+              <WhatsappButton label="Quero agendar minha avaliação" className="max-w-max"/>
+            </div>
+          </aside>
+
+          <div className="shadow-lg bg-white py-[40px] px-[36px] rounded-4xl flex-1 relative">
+            <NumericDescriptionCard
+              number="01"
+              title="Entrevista inicial"
+              description="Conversa detalhada sobre histórico, queixas e objetivos da avaliação. Definição do protocolo personalizado."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="02"
+              title="Aplicação dos testes"
+              description="Sessões com instrumentos psicológicos validados — testes de atenção, memória, raciocínio e personalidade conforme a demanda."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="03"
+              title="Análise e interpretação"
+              description="Integração de todos os resultados com a história clínica do paciente para uma visão diagnóstica completa."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="04"
+              title="Devolutiva e laudo"
+              description="Reunião de devolução dos resultados e entrega do laudo técnico completo com validade oficial."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border-none"
+            />
+
+            <div className="z-100 absolute -bottom-6 -right-6 bg-(--purple) text-white rounded-2xl px-4 py-3 shadow-xl">
+              <div className="text-4xl text-green-200 pb-1 font-bold leading-none font-[Cormorant_Garamond]">30</div>
+              <div className="text-xs opacity-80">dias para o laudo</div>
             </div>
           </div>
         </div>
