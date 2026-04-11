@@ -1,9 +1,5 @@
-import { LessonIcon } from "../../components/ui/svg/LessonIcon";
 import WhatsappButton from "../../components/ui/WhatsappButton";
 import "./index.css";
-import { HomeIcon } from "../../components/ui/svg/HomeIcon";
-import { LocationIcon } from "../../components/ui/svg/LocationIcon";
-import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
 import BenefitsCard from "../../components/ui/BenefitsCard";
 import MegaMenu from "../../components/ui/MegaMenu";
 import { WhatsAppIcon } from "../../components/ui/svg/WhatsAppIcon";
@@ -330,7 +326,7 @@ export default function Avaliacoes() {
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">A voz de quem confia no<br /><i className="text-(--purple)">Nosso trabalho</i></h1>
           </div>
           <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div class="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
         </div>
         
         <div className="flex mt-12">
