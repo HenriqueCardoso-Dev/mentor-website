@@ -101,7 +101,7 @@ export default function ProfessionalPage() {
 
       {/* Benefits Section */}
       <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-20 max-w-[1200px]">
           <div className="flex flex-col items-start text-start w-full">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>

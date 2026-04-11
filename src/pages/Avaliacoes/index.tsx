@@ -112,41 +112,47 @@ export default function Avaliacoes() {
 
       {/* Benefits Section */}
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-20 max-w-[1100px]">
           <div className="flex flex-col items-start text-start w-full">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
-              <span className="tracking-[-2px] me-2">---</span> Por que a
-              Claramente
+              <span className="tracking-[-2px] me-2">---</span> Indicações
             </h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">
-              Tudo que você precisa <br />
-              para <i className="text-(--lavender)">exercer com excelência</i>
+            <h1 className="font-[Playfair_Display] font-semibold text-black text-[3.2rem] leading-[1.1] mt-5">
+              Você pode precisar de uma <br />
+              <i className="text-(--purple)">avaliação</i> se...
             </h1>
           </div>
           <div className="flex gap-6">
-            <BenefitsCard
-              icon={<HomeIcon />}
-              title="Salas Equipadas"
-              description="Consultórios mobiliados, climatizados e com isolamento acústico. Tudo pronto para você atender com conforto e profissionalismo."
-            />
-
-            <BenefitsCard
-              icon={<LocationIcon />}
-              title="Endereço Profissional"
-              description="Use o endereço da Claramente no seu CRP e materiais de divulgação. Credibilidade e localização privilegiada em Itaquaquecetuba."
-            />
-
-            <BenefitsCard
-              icon={<PlanetIcon />}
-              title="Rede Credenciada"
-              description="Faça parte da rede Claramente e receba indicações de pacientes. Aqui, seu perfil fica visível para quem busca atendimento psicológico de qualidade."
-            />
-
-            <BenefitsCard
-              icon={<LessonIcon />}
-              title="Supervisão Clínica"
-              description="Grupos e supervisões individuais regulares para aprimoramento contínuo da sua prática clínica com suporte especializado dos nossos profissionais."
-            />
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="🧠"              
+                theme='cream'
+                title="É adulto e percebe"
+                description="Dificuldade de concentração, esquecimentos frequentes, impulsividade, ansiedade intensa ou precisa de laudo para um processo seletivo, concurso ou benefício."
+                badges={['TDAH', 'Ansiedade', 'Laudo INSS', 'Concurso público', 'Memória']}
+                watermark="purple"
+              />
+            </div>
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="📚"              
+                theme='cream'
+                title="É criança ou adolescente com"
+                description="Baixo rendimento escolar, dificuldade para ler ou escrever, hiperatividade, comportamento desafiador ou suspeita de transtorno do neurodesenvolvimento."
+                badges={['Dislexia', 'TDAH Infantil', 'TEA', 'Dificuldade escolar', 'Desenvolvimento']}
+                watermark="green"
+              />
+            </div>
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="💛"              
+                theme='cream'
+                title="É idoso ou familiar que nota"
+                description="Lapsos de memória recentes, desorientação, mudança de humor ou comportamento, dificuldade nas tarefas cotidianas ou suspeita de demência."
+                badges={['Alzheimer', 'Demência', 'Memória', 'Raciocínio', 'Atenção']}
+                watermark="yellow"
+              />
+            </div>
           </div>
         </div>
       </section>
