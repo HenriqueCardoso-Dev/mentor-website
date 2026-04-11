@@ -33,7 +33,7 @@ export default function Avaliacoes() {
           </a>
       </header>
 
-      <section className="z-100 w-full flex items-center justify-center gap-60 hero bg-(--cream)">
+      <section className="z-99 w-full flex items-center justify-center gap-60 hero bg-(--cream)">
         <aside className="w-full max-w-[600px] text-start">
           <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
             <span
@@ -76,7 +76,7 @@ export default function Avaliacoes() {
           </div>
         </aside>
 
-        <div className="w-full max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
+        <div className="shadow-lg w-full max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
           <p className="flex items-center gap-2 text-3xl font-bold font-[Cormorant_Garamond]">
             Para quem é esta avaliação?
           </p>
