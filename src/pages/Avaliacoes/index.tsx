@@ -33,7 +33,7 @@ export default function Avaliacoes() {
           </a>
       </header>
 
-      <section className=" w-full flex items-center justify-center gap-60 hero bg-(--cream)">
+      <section className="z-100 w-full flex items-center justify-center gap-60 hero bg-(--cream)">
         <aside className="w-full max-w-[600px] text-start">
           <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
             <span
