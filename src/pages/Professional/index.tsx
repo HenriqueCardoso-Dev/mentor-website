@@ -34,8 +34,8 @@ export default function ProfessionalPage() {
     
       <section className=" w-full flex items-center justify-center gap-60 hero">
         <aside className="w-full max-w-150 text-start">
-          <h5 className="text-emerald-300 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
-          <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-300 ">certo</i></h1>
+          <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
+          <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
 
           <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
@@ -103,7 +103,7 @@ export default function ProfessionalPage() {
       <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
           </div>
           <div className="flex gap-6">
@@ -139,7 +139,7 @@ export default function ProfessionalPage() {
       <section className="deep-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full gap-5">
-            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
             <h6 className="text-xs text-gray-400">Flexibilidade para locar por hora, por período ou com pacote mensal. Sem burocracia, sem vínculo empregatício.</h6>
@@ -209,7 +209,7 @@ export default function ProfessionalPage() {
           />
 
           <aside className="w-full max-w-150 text-start">
-            <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Rede Claramente</h5>
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Rede Claramente</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Seu perfil visível para
               <br /><i className="text-(--lavender)">quem está buscando</i>
             </h1>
@@ -258,7 +258,7 @@ export default function ProfessionalPage() {
         <div className="w-full max-w-300 flex justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
-              <h5 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
+              <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
               <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
               <h6 className="text-2sm text-gray-400 max-w-125 mb-12">A supervisão clínica é um espaço de reflexão, aprendizado e aprimoramento da sua prática. Na Claramente, você nunca atua sozinho.</h6>
@@ -331,7 +331,7 @@ export default function ProfessionalPage() {
           <MoreInformationForm/>
 
           <aside className="w-full max-w-140 text-start">
-            <h4 className="text-emerald-300 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Contato Direto</h4>
+            <h4 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Contato Direto</h4>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
             </h1>
 
@@ -341,7 +341,7 @@ export default function ProfessionalPage() {
               <SocialCard
                 icon={<WppIcon/>}
                 label="WhatsApp"
-                content="(11) 9828-2179"
+                content="(11) 98282-9179"
               />
               
               <SocialCard
