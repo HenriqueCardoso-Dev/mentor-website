@@ -26,6 +26,7 @@ import MoreInformationForm from "../../components/MoreInformationForm";
 import SocialCard from "../../components/ui/SocialCard";
 import { WhatsAppIcon as WppIcon } from "../../components/ui/svg/WhatsAppIcon";
 import { InstagramIcon } from "../../components/ui/svg/InstagramIcon";
+import { BackgroundOrbs } from "../../components/ui/BackgroundOrbs";
 
 export default function ProfessionalPage() {
   return (
@@ -33,6 +34,8 @@ export default function ProfessionalPage() {
       <NavigationMenu />
     
       <section className=" w-full flex items-center justify-center gap-60 hero">
+        <BackgroundOrbs />
+
         <aside className="w-full max-w-150 text-start">
           <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
           <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>

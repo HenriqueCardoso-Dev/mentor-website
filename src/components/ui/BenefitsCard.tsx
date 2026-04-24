@@ -15,7 +15,7 @@ export default function BenefitsCard ( { icon, title, description, badges, theme
 
 
   return (
-    <div  className={`relative overflow-hidden shadow-md w-full max-w-[350px] flex flex-col items-start py-[36px] px-[28px] border border-zinc-700 rounded-3xl gap-6 benefit-card bg-(--cream) ${theme === 'cream' ? 'bg-(--cream)' : 'bg-[#ffffff08]'}`}>
+    <div  className={`relative overflow-hidden shadow-md w-full lg:max-w-[350px] flex flex-col items-start py-[36px] px-[28px] border border-zinc-700 rounded-3xl gap-6 benefit-card bg-(--cream) ${theme === 'cream' ? 'bg-(--cream)' : 'bg-[#ffffff08]'}`}>
 
       {watermark && (
         <div className={`absolute -top-15 -right-15 w-40 h-40 bg-${watermark}-400 opacity-30 rounded-full`}></div>

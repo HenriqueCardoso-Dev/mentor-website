@@ -29,8 +29,8 @@ export default function Avaliacoes() {
           </a>
       </header>
 
-      <section className="z-99 w-full flex items-center justify-center gap-60 hero bg-(--cream)">
-        <aside className="w-full max-w-[600px] text-start">
+      <section className="z-99 flex flex-col xl:py-[140px] xl:px-[48px] xl:flex-row items-center justify-center gap-60 bg-(--cream)">
+        <aside className="w-full flex-1 max-w-[600px] text-start">
           <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
             <span
             className="
@@ -48,7 +48,7 @@ export default function Avaliacoes() {
             <div className="panel-dot" />
             Avaliação Psicológica e Neuropsicológica</span>
           </h5>
-          <h1 className="font-[Cormorant_Garamond] text-[5rem] leading-[1.1] mt-6 text-(--deep) font-bold">
+          <h1 className="font-[Cormorant_Garamond] text-[5rem] text-center md:text-left leading-[1.1] mt-6 text-(--deep) font-bold">
             Entenda o que está acontecendo com <br /> {" "}
             <i className="text-(--purple) border-b-3 border-(--sage)">sua mente</i>
           </h1>
@@ -65,14 +65,14 @@ export default function Avaliacoes() {
             </p>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-3 md:flex-row justify-between">
             <Badge label="Laudo com valor legal" icon={<ShieldCheckIcon size="15px" color="#78BFA0"/>}/>
             <Badge label="Resultado em até 30 dias" icon={<Clock4Icon size="15px" color="#78BFA0"/>}/>
             <Badge label="CRP registrado" icon={<SignatureIcon size="15px" color="#78BFA0"/>}/>
           </div>
         </aside>
 
-        <div className="shadow-lg w-full max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
+        <div className="shadow-lg flex-1 max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
           <p className="flex items-center gap-2 text-3xl font-bold font-[Cormorant_Garamond]">
             Para quem é esta avaliação?
           </p>
@@ -110,15 +110,15 @@ export default function Avaliacoes() {
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
         <div className="flex flex-col gap-20 max-w-[1100px]">
           <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase ms-8 md:ms-0">
               <span className="tracking-[-2px] me-2">---</span> Indicações
             </h5>
-            <h1 className="font-[Playfair_Display] font-semibold text-black text-[3.2rem] leading-[1.1] mt-5">
+            <h1 className="font-[Playfair_Display] ms-8 md:ms-0 font-semibold text-black text-[3.2rem] leading-[1.1] mt-5">
               Você pode precisar de uma <br />
               <i className="text-(--purple)">avaliação</i> se...
             </h1>
           </div>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-col lg:flex-row items-center">
             <div className="flex-1">
               <BenefitsCard
                 emoji="🧠"              
@@ -154,7 +154,7 @@ export default function Avaliacoes() {
       </section>
 
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--warm) flex flex-col items-center">
-        <div className="flex gap-20 max-w-[1100px] items-center ">
+        <div className="flex flex-col gap-20 max-w-[1100px] items-center ">
           <aside className="w-full max-w-[600px] text-start flex-1">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
               <span className="tracking-[-2px] me-2">---</span> Como funciona
@@ -230,7 +230,7 @@ export default function Avaliacoes() {
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
               containerClass="bg-white border-gray-200"
               titleClass="text-black"
@@ -346,7 +346,7 @@ export default function Avaliacoes() {
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Dúvidas frequentes</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Perguntas que <i className="text-(--purple)">todo mundo faz</i></h1>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid  grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
               containerClass="bg-white border-gray-200"
               titleClass="text-black"
