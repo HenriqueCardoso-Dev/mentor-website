@@ -24,7 +24,8 @@ export default function NumericDescriptionCard({
 }: NumericDescriptionCardProps) {
   return (
     <div className={`
-      flex items-start gap-6 py-7 px-6 rounded-3xl border transition-all duration-400 ease-in-out
+      group
+      flex items-start gap-6 py-7 px-6 rounded-2xl border transition-all duration-400 ease-in-out
       ${containerClass} ${hoverClass} max-w-[560px]
     `}>
       

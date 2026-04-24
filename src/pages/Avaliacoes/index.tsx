@@ -1,13 +1,9 @@
-import { LessonIcon } from "../../components/ui/svg/LessonIcon";
 import WhatsappButton from "../../components/ui/WhatsappButton";
 import "./index.css";
-import { HomeIcon } from "../../components/ui/svg/HomeIcon";
-import { LocationIcon } from "../../components/ui/svg/LocationIcon";
-import { PlanetIcon } from "../../components/ui/svg/PlanetIcon";
 import BenefitsCard from "../../components/ui/BenefitsCard";
 import MegaMenu from "../../components/ui/MegaMenu";
 import { WhatsAppIcon } from "../../components/ui/svg/WhatsAppIcon";
-import { BookOpen, CircleQuestionMark, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, Section, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
+import { BookOpen, CircleQuestionMark, Clock4Icon, FileTextIcon, FlaskConical, HeartIcon, LaptopMinimal, LockKeyholeIcon, MessageSquareText, ShieldCheckIcon, SignatureIcon, SmileIcon, User, User2 } from "lucide-react";
 import Badge from "../../components/ui/Badge";
 import SpecCard from "../../components/ui/SpecCard";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
@@ -33,8 +29,8 @@ export default function Avaliacoes() {
           </a>
       </header>
 
-      <section className=" w-full flex items-center justify-center gap-60 hero bg-(--cream)">
-        <aside className="w-full max-w-[600px] text-start">
+      <section className="z-99 flex flex-col xl:py-[140px] xl:px-[48px] xl:flex-row items-center justify-center gap-60 bg-(--cream)">
+        <aside className="w-full flex-1 max-w-[600px] text-start">
           <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
             <span
             className="
@@ -52,7 +48,7 @@ export default function Avaliacoes() {
             <div className="panel-dot" />
             Avaliação Psicológica e Neuropsicológica</span>
           </h5>
-          <h1 className="font-[Cormorant_Garamond] text-[5rem] leading-[1.1] mt-6 text-(--deep) font-bold">
+          <h1 className="font-[Cormorant_Garamond] text-[5rem] text-center md:text-left leading-[1.1] mt-6 text-(--deep) font-bold">
             Entenda o que está acontecendo com <br /> {" "}
             <i className="text-(--purple) border-b-3 border-(--sage)">sua mente</i>
           </h1>
@@ -69,14 +65,14 @@ export default function Avaliacoes() {
             </p>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-3 md:flex-row justify-between">
             <Badge label="Laudo com valor legal" icon={<ShieldCheckIcon size="15px" color="#78BFA0"/>}/>
             <Badge label="Resultado em até 30 dias" icon={<Clock4Icon size="15px" color="#78BFA0"/>}/>
             <Badge label="CRP registrado" icon={<SignatureIcon size="15px" color="#78BFA0"/>}/>
           </div>
         </aside>
 
-        <div className="w-full max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
+        <div className="shadow-lg flex-1 max-w-[500px] rounded-[32px] flex flex-col p-[36px] text-(--deep) gap-6 bg-(--white)">
           <p className="flex items-center gap-2 text-3xl font-bold font-[Cormorant_Garamond]">
             Para quem é esta avaliação?
           </p>
@@ -110,43 +106,119 @@ export default function Avaliacoes() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Indication Section */}
       <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-20 max-w-[1100px]">
           <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
-              <span className="tracking-[-2px] me-2">---</span> Por que a
-              Claramente
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase ms-8 md:ms-0">
+              <span className="tracking-[-2px] me-2">---</span> Indicações
             </h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">
-              Tudo que você precisa <br />
-              para <i className="text-(--lavender)">exercer com excelência</i>
+            <h1 className="font-[Playfair_Display] ms-8 md:ms-0 font-semibold text-black text-[3.2rem] leading-[1.1] mt-5">
+              Você pode precisar de uma <br />
+              <i className="text-(--purple)">avaliação</i> se...
             </h1>
           </div>
-          <div className="flex gap-6">
-            <BenefitsCard
-              icon={<HomeIcon />}
-              title="Salas Equipadas"
-              description="Consultórios mobiliados, climatizados e com isolamento acústico. Tudo pronto para você atender com conforto e profissionalismo."
+          <div className="flex gap-6 flex-col lg:flex-row items-center">
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="🧠"              
+                theme='cream'
+                title="É adulto e percebe"
+                description="Dificuldade de concentração, esquecimentos frequentes, impulsividade, ansiedade intensa ou precisa de laudo para um processo seletivo, concurso ou benefício."
+                badges={['TDAH', 'Ansiedade', 'Laudo INSS', 'Concurso público', 'Memória']}
+                watermark="purple"
+              />
+            </div>
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="📚"              
+                theme='cream'
+                title="É criança ou adolescente com"
+                description="Baixo rendimento escolar, dificuldade para ler ou escrever, hiperatividade, comportamento desafiador ou suspeita de transtorno do neurodesenvolvimento."
+                badges={['Dislexia', 'TDAH Infantil', 'TEA', 'Dificuldade escolar', 'Desenvolvimento']}
+                watermark="green"
+              />
+            </div>
+            <div className="flex-1">
+              <BenefitsCard
+                emoji="💛"              
+                theme='cream'
+                title="É idoso ou familiar que nota"
+                description="Lapsos de memória recentes, desorientação, mudança de humor ou comportamento, dificuldade nas tarefas cotidianas ou suspeita de demência."
+                badges={['Alzheimer', 'Demência', 'Memória', 'Raciocínio', 'Atenção']}
+                watermark="yellow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--warm) flex flex-col items-center">
+        <div className="flex flex-col gap-20 max-w-[1100px] items-center ">
+          <aside className="w-full max-w-[600px] text-start flex-1">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
+              <span className="tracking-[-2px] me-2">---</span> Como funciona
+            </h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3.5rem] leading-[1.1] mt-6 text-(--deep) font-bold">
+              Um processo claro, <br />
+              <i className="text-(--purple)">do início ao laudo</i>
+            </h1>
+
+            <p className="leading-[1.85] text-sm text-(--muted) mt-4">
+              A avaliação psicológica é um processo estruturado, realizado por profissional registrado no CRP, com instrumentos validados e metodologia científica.
+            </p>
+
+            <div className="mt-9 flex gap-6 pb-6 flex-col">
+              <WhatsappButton label="Quero agendar minha avaliação" className="max-w-max"/>
+            </div>
+          </aside>
+
+          <div className="shadow-lg bg-white py-[40px] px-[36px] rounded-4xl flex-1 relative">
+            <NumericDescriptionCard
+              number="01"
+              title="Entrevista inicial"
+              description="Conversa detalhada sobre histórico, queixas e objetivos da avaliação. Definição do protocolo personalizado."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="02"
+              title="Aplicação dos testes"
+              description="Sessões com instrumentos psicológicos validados — testes de atenção, memória, raciocínio e personalidade conforme a demanda."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="03"
+              title="Análise e interpretação"
+              description="Integração de todos os resultados com a história clínica do paciente para uma visão diagnóstica completa."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border border-b-(--lavender-light)"
+            />
+            <NumericDescriptionCard
+              number="04"
+              title="Devolutiva e laudo"
+              description="Reunião de devolução dos resultados e entrega do laudo técnico completo com validade oficial."
+              titleClass="text-black"
+              hoverClass="hover:bg-(--lavender-light)"
+              descriptionClass="text-xs text-(--muted)/70"
+              numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
+              containerClass="border-none"
             />
 
-            <BenefitsCard
-              icon={<LocationIcon />}
-              title="Endereço Profissional"
-              description="Use o endereço da Claramente no seu CRP e materiais de divulgação. Credibilidade e localização privilegiada em Itaquaquecetuba."
-            />
-
-            <BenefitsCard
-              icon={<PlanetIcon />}
-              title="Rede Credenciada"
-              description="Faça parte da rede Claramente e receba indicações de pacientes. Aqui, seu perfil fica visível para quem busca atendimento psicológico de qualidade."
-            />
-
-            <BenefitsCard
-              icon={<LessonIcon />}
-              title="Supervisão Clínica"
-              description="Grupos e supervisões individuais regulares para aprimoramento contínuo da sua prática clínica com suporte especializado dos nossos profissionais."
-            />
+            <div className="z-100 absolute -bottom-6 -right-6 bg-(--purple) text-white rounded-2xl px-4 py-3 shadow-xl">
+              <div className="text-4xl text-green-200 pb-1 font-bold leading-none font-[Cormorant_Garamond]">30</div>
+              <div className="text-xs opacity-80">dias para o laudo</div>
+            </div>
           </div>
         </div>
       </section>
@@ -158,7 +230,7 @@ export default function Avaliacoes() {
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
               containerClass="bg-white border-gray-200"
               titleClass="text-black"
@@ -254,7 +326,7 @@ export default function Avaliacoes() {
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">A voz de quem confia no<br /><i className="text-(--purple)">Nosso trabalho</i></h1>
           </div>
           <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div class="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
         </div>
         
         <div className="flex mt-12">
@@ -274,7 +346,7 @@ export default function Avaliacoes() {
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Dúvidas frequentes</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Perguntas que <i className="text-(--purple)">todo mundo faz</i></h1>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid  grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
               containerClass="bg-white border-gray-200"
               titleClass="text-black"
