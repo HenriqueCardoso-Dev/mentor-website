@@ -15,10 +15,10 @@ export default function Avaliacoes() {
     <>
       <MegaMenu title="✦ Laudo com validade oficial · CRP registrado · Itaquaquecetuba e região ✦" className="uppercase font-semibold"/>
 
-      <header className="text-(--purple) bg-(--white) flex w-full justify-between py-6 px-12 items-center sticky top-0 z-100">
+      <header className="text-(--purple) bg-(--white) flex w-full justify-between py-6 px-6 md:px-12 items-center sticky top-0 z-100">
         <div className="font-[Playfair_Display] tracking-widest text-start">
           <h1 className="text-2xl">Claramente</h1>
-          <p className="text-xs uppercase">clínica de psicologia</p>
+          <p className="text-[0.6rem] md:text-xs uppercase">clínica de psicologia</p>
         </div>
 
           <a href="https://wa.me/5511982829179" target="_blank" rel="noopener" className="flex items-center font-semibold">
@@ -29,12 +29,11 @@ export default function Avaliacoes() {
           </a>
       </header>
 
-      <section className="z-99 flex flex-col xl:py-[140px] xl:px-[48px] xl:flex-row items-center justify-center gap-60 bg-(--cream)">
-        <aside className="w-full flex-1 max-w-[600px] text-start">
-          <h5 className="text-emerald-400 text-xs tracking-[0.25em]">
+      <section className="z-99 flex flex-col xl:py-[140px] px-6 xl:px-[48px] xl:flex-row items-center justify-center gap-60 bg-(--cream)">
+        <aside className="w-full flex-1 max-w-[600px] text-start mt-12 md:mt-0">
+          <h5 className="text-emerald-400 text-[0.55rem] md:text-xs tracking-[0.25em]">
             <span
             className="
-              text-md
               tracking-[0.15em]
               uppercase
               text-(--purple)
@@ -48,12 +47,12 @@ export default function Avaliacoes() {
             <div className="panel-dot" />
             Avaliação Psicológica e Neuropsicológica</span>
           </h5>
-          <h1 className="font-[Cormorant_Garamond] text-[5rem] text-center md:text-left leading-[1.1] mt-6 text-(--deep) font-bold">
+          <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] text-start md:text-center md:text-left leading-[1.1] mt-6 text-(--deep) font-bold">
             Entenda o que está acontecendo com <br /> {" "}
             <i className="text-(--purple) border-b-3 border-(--sage)">sua mente</i>
           </h1>
 
-          <p className="leading-[1.85] text-gray-400 mt-4">
+          <p className="leading-[1.85] text-gray-400 mt-16 md:mt-4">
             Avaliação completa com laudo técnico oficial para diagnóstico de TDAH, ansiedade, dificuldades de aprendizagem, memória e desenvolvimento — para crianças, adultos e idosos.
           </p>
 
@@ -107,7 +106,7 @@ export default function Avaliacoes() {
       </section>
 
       {/* Indication Section */}
-      <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
+      <section className="py-[110px] px-6 xl:px-[48px] w-[100vw] z-100  bg-(--white) flex flex-col items-center">
         <div className="flex flex-col gap-20 max-w-[1100px]">
           <div className="flex flex-col items-start text-start w-full">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase ms-8 md:ms-0">
@@ -153,7 +152,7 @@ export default function Avaliacoes() {
         </div>
       </section>
 
-      <section className="py-[110px] px-[48px] w-[100vw] z-100  bg-(--warm) flex flex-col items-center">
+      <section className="py-[110px] px-6 xl:px-[48px] w-[100vw] z-100  bg-(--warm) flex flex-col items-center">
         <div className="flex flex-col gap-20 max-w-[1100px] items-center ">
           <aside className="w-full max-w-[600px] text-start flex-1">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase">
@@ -182,7 +181,7 @@ export default function Avaliacoes() {
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
               numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
-              containerClass="border border-b-(--lavender-light)"
+              containerClass="border border-b-(--lavender-light) flex flex-col md:flex-row"
             />
             <NumericDescriptionCard
               number="02"
@@ -192,7 +191,7 @@ export default function Avaliacoes() {
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
               numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
-              containerClass="border border-b-(--lavender-light)"
+              containerClass="border border-b-(--lavender-light) flex flex-col md:flex-row"
             />
             <NumericDescriptionCard
               number="03"
@@ -202,7 +201,7 @@ export default function Avaliacoes() {
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
               numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
-              containerClass="border border-b-(--lavender-light)"
+              containerClass="border border-b-(--lavender-light) flex flex-col md:flex-row"
             />
             <NumericDescriptionCard
               number="04"
@@ -212,7 +211,7 @@ export default function Avaliacoes() {
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
               numberClass="text-(--lavender-light) font-[Playfair_Display] text-lg group-hover:text-(--lavender) transition-colors duration-300"
-              containerClass="border-none"
+              containerClass="border-none flex flex-col md:flex-row"
             />
 
             <div className="z-100 absolute -bottom-6 -right-6 bg-(--purple) text-white rounded-2xl px-4 py-3 shadow-xl">
@@ -224,11 +223,11 @@ export default function Avaliacoes() {
       </section>
 
       {/* Nossos diferenciais */}
-      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-white">
+      <section className="py-27.5 px-6 md:px-12 w-screen z-100 flex flex-col items-center bg-white">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col justify-center text-center w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
+            <h5 className="text-emerald-400 text-start md:text-center text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Nossos Diferenciais</h5>
+            <h1 className="font-[Cormorant_Garamond] text-start md:text-center text-[2.8rem] md:text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Por que escolher a <br /><i className="text-(--purple)">Claramente</i>?</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
@@ -319,11 +318,11 @@ export default function Avaliacoes() {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-white">
+      <section className="py-27.5 px-6 md:px-12 w-screen z-100 flex flex-col items-center bg-white">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col justify-center text-center w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Depoimentos</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">A voz de quem confia no<br /><i className="text-(--purple)">Nosso trabalho</i></h1>
+            <h5 className="text-emerald-400 text-start md:text-center text-xs tracking-[0.25em] uppercase" ><span className="tracking-[-2px] me-2">---</span> Depoimentos</h5>
+            <h1 className="font-[Cormorant_Garamond] text-start md:text-center text-[2.8rem] md:text-[3.2rem] leading-[1.1] text-black font-bold mt-5">A voz de quem confia no<br /><i className="text-(--purple)">Nosso trabalho</i></h1>
           </div>
           <script src="https://elfsightcdn.com/platform.js" async></script>
           <div className="elfsight-app-e1c5597f-c364-40b5-9834-65ffc1c6fd35" data-elfsight-app-lazy></div>
@@ -340,11 +339,11 @@ export default function Avaliacoes() {
       </section>
       
       {/* Dúvidas frequentes */}
-      <section className="py-27.5 px-12 w-screen z-100 flex flex-col items-center bg-(--lavender-light)">
+      <section className="py-27.5 px-6 md:px-12 w-screen z-100 flex flex-col items-center bg-(--lavender-light)">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Dúvidas frequentes</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Perguntas que <i className="text-(--purple)">todo mundo faz</i></h1>
+            <h5 className="text-emerald-400 text-start md:text-center text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Dúvidas frequentes</h5>
+            <h1 className="font-[Cormorant_Garamond] text-start md:text-center text-[2.8rem] md:text-[3.2rem] leading-[1.1] text-black font-bold mt-5">Perguntas que <i className="text-(--purple)">todo mundo faz</i></h1>
           </div>
           <div className="grid  grid-cols-1 md:grid-cols-2 gap-6">
             <NumericDescriptionCard
