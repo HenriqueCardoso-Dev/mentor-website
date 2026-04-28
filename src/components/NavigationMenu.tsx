@@ -1,10 +1,33 @@
 import './styles/NavigationMenu.css';
 import Button from './ui/Button';
 import './styles/Buttons.css'
+import { useEffect, useState } from 'react';
 
 export default function NavigationMenu() {
+
+  const [ativo, setAtivo] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setAtivo(true);
+      } else {
+        setAtivo(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-100 px-[40px] flex items-center justify-between navigation-menu">
+    <nav className="fixed top-0 left-0 right-0 z-100 px-[40px] flex items-center justify-between navigation-menu" style={{
+        background: ativo ? "" : "#1a1030e8",
+        transition: "0.3s",
+      }}>
       <div className="w-[500px] flex gap-5 items-center p-3">
         <a href="/" className="back-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7-7l-7 7 7 7"></path></svg>

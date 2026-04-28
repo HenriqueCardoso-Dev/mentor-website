@@ -7,12 +7,13 @@
 
 /* ── SPLASH CONTAINER ── */
 .splash {
-  position: relative; z-index: 10;
+  position: relative; 
+  z-index: 10;
   display: flex; flex-direction: column; align-items: center;
-  padding: 40px 24px;
   text-align: center;
   animation: splashIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
 @keyframes splashIn {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -53,14 +54,6 @@
   line-height: 1.5;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 100%;
-  max-width: 680px;
-}
-
 /* ── FOOTER NOTE ── */
 .splash-footer {
   margin-top: 36px;
@@ -73,21 +66,7 @@
 @media (max-width: 560px) {
   body { overflow-y: auto; }
   html, body { height: auto; }
-  .cards { grid-template-columns: 1fr; max-width: 360px; }
   .profile-card { padding: 32px 28px; }
   .card-title { font-size: 1.5rem; }
 }
 
-@media screen and (max-width: 720px) {
-  .cards {
-    grid-template-columns: 1fr;
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .cards {
-    min-width: none;
-    width: 60%;
-  }
-}
