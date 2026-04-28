@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { BackgroundOrbs } from './components/ui/BackgroundOrbs'
 import ProfessionalPage from './pages/Professional'
 import AvaliacoesPage from './pages/Avaliacoes'
 import SplashPage from './pages/Splash'
