@@ -48,12 +48,12 @@ export default function Avaliacoes() {
             Avaliação Psicológica e Neuropsicológica</span>
           </h5>
           <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] text-start md:text-center md:text-left leading-[1.1] mt-6 text-(--deep) font-bold">
-            Entenda o que está acontecendo com <br /> {" "}
-            <i className="text-(--purple) border-b-3 border-(--sage)">sua mente</i>
+            Entenda, com clareza, <br /> {" "}
+            <i className="text-(--purple) border-b-3 border-(--sage)">o que está acontecendo</i> com você ou com quem você ama
           </h1>
 
           <p className="leading-[1.85] text-gray-400 mt-16 md:mt-4">
-            Avaliação completa com laudo técnico oficial para diagnóstico de TDAH, ansiedade, dificuldades de aprendizagem, memória e desenvolvimento — para crianças, adultos e idosos.
+            Muito além de um diagnóstico, a avaliação psicológica é o primeiro passo para uma vida com mais direção. Identificamos o que compromete seu desempenho, sua memória ou seu bem-estar — e entregamos um laudo técnico oficial, assinado por especialista, para que você possa agir com segurança.
           </p>
 
           <div className="mt-9 flex gap-6 pb-6 flex-col">
@@ -67,7 +67,7 @@ export default function Avaliacoes() {
           <div className="flex flex-col gap-3 md:flex-row justify-between">
             <Badge label="Laudo com valor legal" icon={<ShieldCheckIcon size="15px" color="#78BFA0"/>}/>
             <Badge label="Resultado em até 30 dias" icon={<Clock4Icon size="15px" color="#78BFA0"/>}/>
-            <Badge label="CRP registrado" icon={<SignatureIcon size="15px" color="#78BFA0"/>}/>
+            <Badge label="CRP 06/61283" icon={<SignatureIcon size="15px" color="#78BFA0"/>}/>
           </div>
         </aside>
 
@@ -123,7 +123,7 @@ export default function Avaliacoes() {
                 emoji="🧠"              
                 theme='cream'
                 title="É adulto e percebe"
-                description="Dificuldade de concentração, esquecimentos frequentes, impulsividade, ansiedade intensa ou precisa de laudo para um processo seletivo, concurso ou benefício."
+                description="Dificuldade de concentração, esquecimentos frequentes, impulsividade, ansiedade intensa — ou precisa de laudo para concurso público, processo seletivo ou benefício previdenciário."
                 badges={['TDAH', 'Ansiedade', 'Laudo INSS', 'Concurso público', 'Memória']}
                 watermark="purple"
               />
@@ -143,7 +143,7 @@ export default function Avaliacoes() {
                 emoji="💛"              
                 theme='cream'
                 title="É idoso ou familiar que nota"
-                description="Lapsos de memória recentes, desorientação, mudança de humor ou comportamento, dificuldade nas tarefas cotidianas ou suspeita de demência."
+                description="Lapsos de memória recentes, desorientação, mudança de humor ou dificuldade nas tarefas cotidianas. O diagnóstico precoce amplia as possibilidades de tratamento e cuidado."
                 badges={['Alzheimer', 'Demência', 'Memória', 'Raciocínio', 'Atenção']}
                 watermark="yellow"
               />
@@ -164,7 +164,7 @@ export default function Avaliacoes() {
             </h1>
 
             <p className="leading-[1.85] text-sm text-(--muted) mt-4">
-              A avaliação psicológica é um processo estruturado, realizado por profissional registrado no CRP, com instrumentos validados e metodologia científica.
+              A avaliação é conduzida por profissional especialista em Neuropsicologia, com mais de 20 anos de experiência clínica. Utilizamos instrumentos validados pelo CFP e metodologia baseada em evidências — para que o resultado seja confiável, compreensível e verdadeiramente útil para você.
             </p>
 
             <div className="mt-9 flex gap-6 pb-6 flex-col">
@@ -176,7 +176,7 @@ export default function Avaliacoes() {
             <NumericDescriptionCard
               number="01"
               title="Entrevista inicial"
-              description="Conversa detalhada sobre histórico, queixas e objetivos da avaliação. Definição do protocolo personalizado."
+              description="Conversa detalhada sobre histórico, queixas e objetivos. Definição do protocolo personalizado para o seu caso."
               titleClass="text-black"
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
@@ -186,7 +186,7 @@ export default function Avaliacoes() {
             <NumericDescriptionCard
               number="02"
               title="Aplicação dos testes"
-              description="Sessões com instrumentos psicológicos validados — testes de atenção, memória, raciocínio e personalidade conforme a demanda."
+              description="Sessões com instrumentos psicológicos e neuropsicológicos validados — testes de atenção, memória, raciocínio, linguagem e personalidade, conforme a demanda."
               titleClass="text-black"
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
@@ -196,7 +196,7 @@ export default function Avaliacoes() {
             <NumericDescriptionCard
               number="03"
               title="Análise e interpretação"
-              description="Integração de todos os resultados com a história clínica do paciente para uma visão diagnóstica completa."
+              description="Integração de todos os resultados com a história clínica para uma visão diagnóstica completa, fundamentada e ética."
               titleClass="text-black"
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
@@ -206,7 +206,7 @@ export default function Avaliacoes() {
             <NumericDescriptionCard
               number="04"
               title="Devolutiva e laudo"
-              description="Reunião de devolução dos resultados e entrega do laudo técnico completo com validade oficial."
+              description="Reunião de devolução com explicação clara dos resultados e entrega do laudo técnico completo com validade oficial — em até 30 dias."
               titleClass="text-black"
               hoverClass="hover:bg-(--lavender-light)"
               descriptionClass="text-xs text-(--muted)/70"
@@ -241,7 +241,7 @@ export default function Avaliacoes() {
                 </div>
               }
               title="Laudo com validade legal"
-              description="Documento técnico emitido por profissional registrado no CRP, com validade para uso clínico, educacional, jurídico e previdenciário."
+              description="Documento técnico emitido por especialista registrada no CRP, com validade para uso clínico, educacional, jurídico e previdenciário — aceito em concursos, escolas, clínicas e processos judiciais."
             />
 
             <NumericDescriptionCard
@@ -255,7 +255,7 @@ export default function Avaliacoes() {
                 </div>
               }
               title="Instrumentos validados pelo CFP"
-              description="Utilizamos apenas testes aprovados pelo Conselho Federal de Psicologia, com normas atualizadas para a população brasileira."
+              description="Utilizamos exclusivamente testes aprovados pelo Conselho Federal de Psicologia, com normas atualizadas para a população brasileira — garantindo precisão e legitimidade diagnóstica."
             />
 
             <NumericDescriptionCard
@@ -269,7 +269,7 @@ export default function Avaliacoes() {
                 </div>
               }
               title="Atendimento humanizado"
-              description="Ambiente seguro e acolhedor. Cada avaliação é conduzida com respeito ao ritmo, história e necessidade singular de cada pessoa."
+              description="Ambiente seguro e acolhedor. Cada avaliação respeita o ritmo, a história e a singularidade de cada pessoa — sem julgamentos, com escuta genuína."
             />
 
             <NumericDescriptionCard
@@ -283,7 +283,7 @@ export default function Avaliacoes() {
                 </div>
               }
               title="Presencial e online"
-              description="Realizamos avaliações presencialmente em Itaquaquecetuba ou de forma remota com a mesma qualidade e sigilo garantido."
+              description="Realizamos avaliações em Itaquaquecetuba ou de forma remota, com a mesma qualidade técnica, sigilo e cuidado — seja qual for a sua localidade."
             />
 
             <NumericDescriptionCard
@@ -296,8 +296,8 @@ export default function Avaliacoes() {
                   <MessageSquareText size={20} />
                 </div>
               }
-              title="Devolutiva completa"
-              description="Explicamos os resultados de forma clara para a família e paciente, com orientações práticas sobre os próximos passos e encaminhamentos."
+              title="Devolutiva completa e acessível"
+              description="Explicamos os resultados de forma clara para o paciente e a família, com orientações práticas sobre próximos passos, encaminhamentos e uso do laudo."
             />
 
             <NumericDescriptionCard
@@ -310,8 +310,8 @@ export default function Avaliacoes() {
                   <BookOpen  size={20} />
                 </div>
               }
-              title="Relatório multi-uso"
-              description="O laudo pode ser utilizado para escola, clínicas médicas, INSS, concursos, processos judiciais, planos de saúde e outros fins."
+              title="Mais de 20 anos de experiência clínica"
+              description="Nossa especialista atua desde 2000, com formação em Neuropsicologia e Psicologia Hospitalar. Experiência que se traduz em avaliações mais precisas e orientações mais assertivas."
             />
           </div>
         </div>
