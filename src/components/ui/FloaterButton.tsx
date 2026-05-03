@@ -57,7 +57,7 @@ export default function FloaterButton({
         className="
           absolute
           inset-0
-          bg-green-600
+          bg-green-400
           opacity-0
           transition-all
           duration-500
