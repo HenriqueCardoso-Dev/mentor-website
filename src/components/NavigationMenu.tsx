@@ -60,13 +60,13 @@ export default function NavigationMenu() {
       </div>
 
       <ul className='list nav-links py-6 me-2 flex items-center'>
-        <li><a href="#" className='text-gray-400 hover:text-white font-bold'>Benefícios</a></li>
-        <li><a href="#" className='text-gray-400 hover:text-white font-bold'>Salas</a></li>
-        <li><a href="#" className='text-gray-400 hover:text-white font-bold'>Rede Claramente</a></li>
-        <li><a href="#" className='text-gray-400 hover:text-white font-bold'>Supervisão</a></li>
-        <li><a href="#">
-          <Button className="bg-emerald-400 hover:bg-emerald-500 text-black py-2 rounded-full px-5 cursor-pointer">
-            Quero Saber Mais
+        <li><a href="#benefits" className='text-gray-400 hover:text-white font-bold'>Benefícios</a></li>
+        <li><a href="#salas" className='text-gray-400 hover:text-white font-bold'>Salas</a></li>
+        <li><a href="#rede-claramente" className='text-gray-400 hover:text-white font-bold'>Rede Claramente</a></li>
+        <li><a href="#supervisao" className='text-gray-400 hover:text-white font-bold'>Supervisão</a></li>
+        <li><a href="#contato">
+          <Button className="bg-green-300 text-black py-2 rounded-full px-5 cursor-pointer font-semibold">
+            Quero Saber +
           </Button>
         </a></li>
       </ul>

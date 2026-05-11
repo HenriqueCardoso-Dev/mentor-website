@@ -9,13 +9,14 @@ interface Benefit {
   badges?: string[];
   theme?: 'cream' | 'default' | undefined;
   watermark ?: 'purple' | 'green' | 'yellow'; // color for the watermark.
+  className ?: string;
 }
 
-export default function BenefitsCard ( { icon, title, description, badges, theme, emoji, watermark }: Benefit) {
+export default function BenefitsCard ( { icon, title, description, badges, theme, emoji, watermark, className }: Benefit) {
 
 
   return (
-    <div  className={`relative overflow-hidden shadow-md w-full lg:max-w-[350px] flex flex-col items-start py-[36px] px-[28px] border border-zinc-700 rounded-3xl gap-6 benefit-card bg-(--cream) ${theme === 'cream' ? 'bg-(--cream)' : 'bg-[#ffffff08]'}`}>
+    <div  className={`relative overflow-hidden shadow-md w-full lg:max-w-[350px] flex flex-col items-start py-[36px] px-[28px] border border-zinc-700 rounded-3xl gap-6 benefit-card bg-(--cream) ${theme === 'cream' ? 'bg-(--cream)' : 'bg-[#ffffff08]'} ${className || ''}`}>
 
       {watermark && (
         <div className={`absolute -top-15 -right-15 w-40 h-40 bg-${watermark}-400 opacity-30 rounded-full`}></div>

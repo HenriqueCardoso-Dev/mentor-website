@@ -67,8 +67,8 @@ export default function MoreInformationForm() {
         <textarea {...register("message")} placeholder="Conte sobre sua atuação e o que está buscando..." className="rounded-xl py-3.25 px-4" style={{background: 'rgba(255, 255, 255, 0.04)'}}/>
       </fieldset>
       
-      <Button className="bg-green-300 flex gap-3 py-4 px-8 justify-center items-center rounded-xl text-black text-sm cursor-pointer font-semibold" type="submit">
-        <div className="h-4 w-4">
+      <Button isFlex={true} className="bg-green-300 flex gap-3 py-4 px-8 justify-center items-center rounded-xl text-black text-sm cursor-pointer font-semibold" type="submit">
+        <div className="h-4 w-4 me-2">
           <svg
             style={{width: '18px', height: '18px'}}
             viewBox={whatsappIcon.viewBox} 

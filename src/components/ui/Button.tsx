@@ -3,8 +3,9 @@ import type { ReactNode, ButtonHTMLAttributes } from 'react';
 export default function Button({ 
   children, 
   className, 
+  isFlex = false,
   ...props 
-}: { children: ReactNode } & ButtonHTMLAttributes<HTMLButtonElement>) {
+}: { children: ReactNode, isFlex?: boolean } & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
       {...props}
@@ -15,7 +16,6 @@ export default function Button({
         items-center
         justify-center
         border-2
-        bg-transparent
         transition-all
         duration-300
         ${className || ''}
@@ -35,7 +35,10 @@ export default function Button({
         " 
       />
 
-      <span className="relative z-10">
+      <span className={`
+        ${isFlex ? 'flex items-center' : 'relative'} 
+        z-10
+      `}>
         {children}
       </span>
     </button>

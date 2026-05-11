@@ -33,7 +33,7 @@ export default function ProfessionalPage() {
     <>
       <NavigationMenu />
     
-      <section className=" w-full flex items-center justify-center gap-60 hero">
+      <section className=" w-full flex items-center justify-center gap-60 hero text-white">
         <BackgroundOrbs />
 
         <aside className="w-full max-w-150 text-start">
@@ -103,7 +103,7 @@ export default function ProfessionalPage() {
       </section>  
 
       {/* Benefits Section */}
-      <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center">
+      <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center text-white" id="benefits">
         <div className="flex flex-col gap-20 max-w-[1200px]">
           <div className="flex flex-col items-start text-start w-full">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
@@ -120,6 +120,8 @@ export default function ProfessionalPage() {
               icon={<LocationIcon />}
               title="Endereço Profissional"
               description="Use o endereço da Claramente no seu CRP e materiais de divulgação. Credibilidade e localização privilegiada em Itaquaquecetuba."
+              className=""
+
             />
 
             <BenefitsCard
@@ -139,7 +141,7 @@ export default function ProfessionalPage() {
 
       
       {/* subscription Section */}
-      <section className="deep-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center">
+      <section className="deep-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center text-white" id="salas">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col items-start text-start w-full gap-5">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
@@ -202,7 +204,7 @@ export default function ProfessionalPage() {
       </section>
 
       {/* claramente preview section */}
-      <section className="cred-section py-27.5 px-12 w-screen z-100 flex justify-center items-center">
+      <section className="cred-section py-27.5 px-12 w-screen z-100 flex justify-center items-center text-white" id="rede-claramente">
         <div className="w-full max-w-300 gap-20 flex items-center justify-center">
           <BrowserScreen 
             width={'100%'} 
@@ -237,14 +239,14 @@ export default function ProfessionalPage() {
               description="Painel completo com seus horários, reservas de sala e métricas de visualização do seu perfil na plataforma."
             />
 
-            <div className="flex mt-12 gap-4">
+            <div className="mt-12 gap-4 flex">
               <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
-                <Button className="bg-green-300 flex gap-3 py-4 px-8 max-w-max items-center rounded-full text-black text-sm cursor-pointer font-semibold">
-                  <div className="h-4 w-4">
+                <Button isFlex={true} className="bg-green-300 py-4 px-8 max-w-max rounded-full text-black text-sm cursor-pointer font-semibold" >
+                  <div className="h-4 w-4 me-2">
                     <LinkIcon/>
                   </div>
 
-                  Acessar a plataforma
+                  <span>Acessar a plataforma</span>
                 </Button>
               </a>
 
@@ -257,7 +259,7 @@ export default function ProfessionalPage() {
         </div>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen z-100 flex flex-col items-center">
+      <section className="dark-bg py-27.5 px-12 w-screen z-100 flex flex-col items-center text-white" id="supervisao">
         <div className="w-full max-w-300 flex justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
@@ -299,37 +301,21 @@ export default function ProfessionalPage() {
         
       </section>
 
-      <section className="deep-bg py-27.5 px-12 w-screen flex flex-col items-center cta-section">
+      <section className="deep-bg py-27.5 px-12 w-screen flex flex-col items-center cta-section text-white">
         <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">
           Pronto para fazer <br />
           parte da <i className="text-emerald-200 ">Claramente</i>?
         </h1>
         <p className="leading-[1.85] text-gray-400 mt-4 max-w-120">Entre em contato pelo WhatsApp e vamos encontrar juntos o melhor caminho para você começar a atender na clínica.</p>
 
-        <div className="flex mt-12 gap-4">
-          <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
-            <Button className="bg-green-300 flex gap-3 py-4 px-8 max-w-max items-center rounded-full text-black text-sm cursor-pointer font-semibold">
-              <div className="h-4 w-4">
-                <svg
-                  style={{width: '18px', height: '18px'}}
-                  viewBox={whatsappIcon.viewBox} 
-                  fill={whatsappIcon.fill} 
-                >
-                  <path d={whatsappIcon.d} />
-                </svg>
-              </div>
-
-              Quero saber mais
-            </Button>
-          </a>
-
+        <a className="flex mt-12 gap-4" href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
           <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
             Acessar a plataforma
           </Button>
-        </div>
+        </a>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen flex flex-col items-center ">
+      <section className="dark-bg py-27.5 px-12 w-screen flex flex-col items-center text-white" id="contato">
         <div className="w-full max-w-300 flex justify-between">
           <MoreInformationForm/>
 
