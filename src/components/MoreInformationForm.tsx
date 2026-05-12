@@ -32,7 +32,7 @@ export default function MoreInformationForm() {
       className="w-full max-w-140 py-11 px-10 rounded-[28px] border border-gray-800 text-start flex flex-col gap-6"
     >
       <h1 className="font-[Cormorant_Garamond] text-3xl mb-[20px]">Solicite mais informações</h1>
-      <div className="flex w-full gap-3">
+      <div className="flex flex-col md:flex-row w-full gap-3">
         <fieldset className="flex flex-col w-full">
           <label>Nome Completo</label>
           <input {...register("firstName")} placeholder="Seu nome" className="rounded-xl py-3.25 px-4 text-sm border border-gray-800" style={{background: 'rgba(255, 255, 255, 0.04)'}}/>
