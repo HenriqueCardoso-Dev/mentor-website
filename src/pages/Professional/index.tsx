@@ -21,7 +21,6 @@ import { LinkIcon } from "../../components/ui/svg/LinkIcon";
 import { StarIcon } from "../../components/ui/svg/StarIcon";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
 import QuoteCard from "../../components/ui/QuoteCard";
-import { whatsappIcon } from "../../components/FakeSVGIcons";
 import MoreInformationForm from "../../components/MoreInformationForm";
 import SocialCard from "../../components/ui/SocialCard";
 import { WhatsAppIcon as WppIcon } from "../../components/ui/svg/WhatsAppIcon";
