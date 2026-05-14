@@ -4,7 +4,6 @@ import NotifyToast from "../../components/NotifyToast";
 import Button from "../../components/ui/Button";
 import {LessonIcon} from "../../components/ui/svg/LessonIcon";
 import {UserIcon} from "../../components/ui/svg/UserIcon";
-import WhatsappButton from "../../components/ui/WhatsappButton";
 import "./index.css";
 import { HomeIcon } from "../../components/ui/svg/HomeIcon";
 import { LocationIcon } from "../../components/ui/svg/LocationIcon";
