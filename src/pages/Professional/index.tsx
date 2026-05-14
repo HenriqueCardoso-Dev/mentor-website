@@ -26,26 +26,39 @@ import SocialCard from "../../components/ui/SocialCard";
 import { WhatsAppIcon as WppIcon } from "../../components/ui/svg/WhatsAppIcon";
 import { InstagramIcon } from "../../components/ui/svg/InstagramIcon";
 import { BackgroundOrbs } from "../../components/ui/BackgroundOrbs";
+import { whatsappIcon } from "../../components/FakeSVGIcons";
 
 export default function ProfessionalPage() {
   return (
     <>
       <NavigationMenu />
     
-      <section className="w-full max-w-screen flex items-center justify-center hero text-white">
+      <section className="w-full max-w-screen px-6 md:px-12 flex items-center justify-center hero text-white">
         <BackgroundOrbs />
 
-        <div className="max-w-max flex items-center justify-center flex-col xl:flex-row gap-50">
+        <div className="max-w-max flex items-center justify-center flex-col xl:flex-row gap-30 md:gap-50">
           <aside className="w-full max-w-150 text-start">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
 
             <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
-            <div className="mt-9 flex gap-6 border-b border-gray-700 mb-10 pb-15">
-              <WhatsappButton/>
+            <div className="mt-9 flex flex-col sm:flex-row gap-3 border-b border-gray-700 mb-10 pb-15">
+              <Button isFlex={true} className="bg-green-300 flex gap-3 py-4 px-8 justify-center items-center rounded-xl sm:rounded-full text-(--deep) text-sm cursor-pointer font-semibold " type="submit">
+                <div className="h-4 w-4 me-2">
+                  <svg
+                    style={{width: '18px', height: '18px'}}
+                    viewBox={whatsappIcon.viewBox} 
+                    fill={whatsappIcon.fill} 
+                  >
+                    <path d={whatsappIcon.d} />
+                  </svg>
+                </div>
+        
+                Conversar pelo WhatsApp
+              </Button>
 
-              <Button className="py-4 px-8 max-w-max items-center rounded-full border border-gray-600 text-gray-300 text-sm">
+              <Button className="rounded-xl sm:rounded-full py-4 px-8 max-w-full sm:max-w-max items-center  border border-gray-600 text-gray-300 text-sm">
                 Ver planos de salas
               </Button>
             </div>
@@ -68,7 +81,7 @@ export default function ProfessionalPage() {
 
           <div className="hero-panel w-full rounded-4xl flex flex-col p-9 text-gray-400 gap-6 border">
             <p className="flex items-center justify-center gap-2 text-sm font-bold">
-              <div className="panel-dot"/>
+              <span className="panel-dot"/>
               Painel do Profissional - Claramente
             </p>
 
@@ -104,13 +117,13 @@ export default function ProfessionalPage() {
       </section>  
 
       {/* Benefits Section */}
-      <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center text-white" id="benefits">
+      <section className="py-27.5 px-6 md:px-12 w-screen z-100 benefits flex flex-col items-center text-white" id="benefits">
         <div className="flex flex-col gap-20 max-w-[1200px] w-full">
-          <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
+          <div className="flex flex-col items-center xl:items-start text-start w-full">
+            <h5 className="text-emerald-400 self-start sm:self-center xl:self-start text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 m-auto">
             <BenefitsCard
               icon={<HomeIcon />}
               title="Salas Equipadas"
@@ -140,11 +153,11 @@ export default function ProfessionalPage() {
 
       
       {/* subscription Section */}
-      <section className="deep-bg py-27.5 px-12 w-full max-w-screen z-100 flex flex-col items-center text-white" id="salas">
-        <div className="flex flex-col gap-20">
+      <section className="deep-bg py-27.5 px-6 md:px-12 max-w-screen z-100 flex flex-col items-center text-white" id="salas">
+        <div className="w-full flex flex-col gap-20 max-w-[1200px]">
           <div className="flex flex-col items-start text-start w-full gap-5">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
             <h6 className="text-xs text-gray-400">Flexibilidade para locar por hora, por período ou com pacote mensal. Sem burocracia, sem vínculo empregatício.</h6>
           </div>
@@ -203,7 +216,7 @@ export default function ProfessionalPage() {
       </section>
 
       {/* claramente preview section */}
-      <section className="cred-section py-27.5 px-12 w-screen z-100 flex justify-center items-center text-white" id="rede-claramente">
+      <section className="cred-section py-27.5 px-6 md:px-12 w-screen z-100 flex justify-center items-center text-white" id="rede-claramente">
         <div className="w-full max-w-300 gap-20 flex items-center justify-center">
           <span className="hidden xl:flex flex-1">
             <BrowserScreen 
@@ -216,8 +229,8 @@ export default function ProfessionalPage() {
 
           <aside className="w-full max-w-150 text-start">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Rede Claramente</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Seu perfil visível para
-              <br /><i className="text-(--lavender)">quem está buscando</i>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Seu perfil visível para
+              <br className="hidden md:block"/><i className="text-(--lavender)"> quem está buscando</i>
             </h1>
 
             <p className="leading-[1.85] text-gray-400 mt-4 mb-12">Faça parte da plataforma Claramente e apareça para pacientes que buscam atendimento psicológico na região. Um sistema feito para conectar profissionais e pacientes de forma inteligente.</p>
@@ -240,9 +253,9 @@ export default function ProfessionalPage() {
               description="Painel completo com seus horários, reservas de sala e métricas de visualização do seu perfil na plataforma."
             />
 
-            <div className="mt-12 gap-4 flex">
+            <div className="mt-12 gap-4 flex flex-col sm:flex-row">
               <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
-                <Button isFlex={true} className="bg-green-300 py-4 px-8 max-w-max rounded-full text-black text-sm cursor-pointer font-semibold" >
+                <Button isFlex={true} className="bg-green-300 py-4 px-8 w-full sm:max-w-max rounded-xl sm:rounded-full text-black text-sm cursor-pointer font-semibold" >
                   <div className="h-4 w-4 me-2">
                     <LinkIcon/>
                   </div>
@@ -251,7 +264,7 @@ export default function ProfessionalPage() {
                 </Button>
               </a>
 
-              <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
+              <Button className="border border-gray-800 py-4 px-8 rounded-xl sm:rounded-full hover:border-gray-700 text-sm cursor-pointer">
                 Tirar dúvidas
               </Button>
             </div>
@@ -260,12 +273,12 @@ export default function ProfessionalPage() {
         </div>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen z-100 flex flex-col items-center text-white" id="supervisao">
+      <section className="dark-bg py-27.5 px-6 md:px-12 w-screen z-100 flex flex-col items-center text-white" id="supervisao">
         <div className="w-full max-w-300 flex flex-col xl:flex-row gap-16 xl:gap-6 justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
               <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
-              <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
+              <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
               <h6 className="text-2sm text-gray-400 max-w-125 mb-12">A supervisão clínica é um espaço de reflexão, aprendizado e aprimoramento da sua prática. Na Claramente, você nunca atua sozinho.</h6>
             </div>
@@ -302,10 +315,10 @@ export default function ProfessionalPage() {
         
       </section>
 
-      <section className="deep-bg py-27.5 px-12 w-screen flex flex-col items-center cta-section text-white">
-        <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">
+      <section className="deep-bg py-27.5 px-6 md:px-12 w-screen flex flex-col items-center cta-section text-white">
+        <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">
           Pronto para fazer <br />
-          parte da <i className="text-emerald-200 ">Claramente</i>?
+          parte da <i className="text-emerald-200">Claramente</i>?
         </h1>
         <p className="leading-[1.85] text-gray-400 mt-4 max-w-120">Entre em contato pelo WhatsApp e vamos encontrar juntos o melhor caminho para você começar a atender na clínica.</p>
 
@@ -316,13 +329,13 @@ export default function ProfessionalPage() {
         </a>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen flex flex-col items-center text-white" id="contato">
+      <section className="dark-bg py-27.5 px-6 md:px-12 w-screen flex flex-col items-center text-white" id="contato">
         <div className="w-full max-w-300 flex flex-col-reverse items-center xl:flex-row gap-16 xl:gap-6 justify-between">
           <MoreInformationForm/>
 
           <aside className="w-full max-w-140 text-start">
             <h4 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Contato Direto</h4>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
             </h1>
 
             <p className="leading-[1.85] text-gray-400 mt-4 mb-12">Tem alguma dúvida? Quer visitar o espaço? Entre em contato e agendamos uma visita sem compromisso.</p>

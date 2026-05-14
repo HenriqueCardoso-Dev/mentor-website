@@ -23,7 +23,7 @@ export default function BenefitsCard ( { icon, title, description, badges, theme
       )}
 
       {icon && (
-        <div className={`icon-bg-emerald max-w-[52px] h-[52px] w-full rounded-2xl flex items-center justify-center p-[12px]`}>
+        <div className={`icon-bg-emerald max-w-[52px] h-[52px] w-full rounded-2xl p-[12px]`}>
           {icon}
         </div>
       )}

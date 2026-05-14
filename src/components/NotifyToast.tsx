@@ -21,12 +21,12 @@ export default function NotifyToast({
 
   return (
     <div className="border-1 rounded-2xl p-[15px] flex items-center text-xs gap-5 justify-between notify-bg">
-      <div className={`status-bg-${color} max-w-[40px] h-[35px] w-full rounded-lg flex items-center justify-center p-[10px]`}>
+      <div className={`status-bg-${color} w-100 max-w-[40px] h-[35px] rounded-lg text-center p-[10px]`}>
         {icon}
       </div>
       <div className="flex flex-col gap-1 items-start">
         <h5 className="text-xs font-bold text-gray-300 text-start">{title}</h5>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-gray-500 text-start">
           {description}
         </p>
       </div>

@@ -13,7 +13,7 @@ interface SubscriptionCardProps {
 
 export function SubscriptionCard({ icon, frequency, frequencyDescription, price, benefits, buttonText, isPremium }: SubscriptionCardProps) {
   return (
-    <div className={`min-w-[384px] w-full min-h-[627px] rounded-[28px] subscription-card py-[40px] px-[32px] flex flex-col justify-between ${isPremium && 'isPremium'}`}>
+    <div className={`min-w-min md:min-w-[384px] w-full min-h-[627px] rounded-[28px] subscription-card py-[40px] px-[32px] flex flex-col justify-between ${isPremium && 'isPremium'}`}>
       <div className="head-card flex flex-col gap-6 border-b-1 border-zinc-700 relative">
 
         {isPremium && 
@@ -39,7 +39,7 @@ export function SubscriptionCard({ icon, frequency, frequencyDescription, price,
 
       <div className="benefits-list flex flex-col gap-2 items-start mt-6 h-full ">
         {benefits.map((benefit, index) => (
-          <div key={index} className="benefit-item text-sm text-gray-400">
+          <div key={index} className="benefit-item text-sm text-gray-400 text-start">
             ✔️ {benefit}
           </div>
         ))}

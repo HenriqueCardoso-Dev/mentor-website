@@ -38,7 +38,7 @@ export default function NavigationMenu() {
       }}>
       <div className="w-[500px] flex gap-5 items-center p-3">
         <a href="/" className="back-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7-7l-7 7 7 7"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5m7-7l-7 7 7 7"></path></svg>
           Voltar
         </a>
         <div className="w-[1px] height-[18px]">|</div>
