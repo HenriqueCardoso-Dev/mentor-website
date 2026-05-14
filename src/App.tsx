@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ProfessionalPage from './pages/Professional'
-import AvaliacoesPage from './pages/Avaliacoes'
 import SplashPage from './pages/Splash'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -12,12 +12,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<SplashPage />} />
-          <Route path="/professional" element={<ProfessionalPage />} />
-          <Route path="/avaliacoes" element={<AvaliacoesPage />} />
+          <Route path="/profissional" element={<ProfessionalPage />} />
         </Routes>
       </BrowserRouter>
 
-
+      <Footer/>
       
     </>
   )

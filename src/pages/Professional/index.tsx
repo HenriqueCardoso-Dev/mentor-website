@@ -4,7 +4,6 @@ import NotifyToast from "../../components/NotifyToast";
 import Button from "../../components/ui/Button";
 import {LessonIcon} from "../../components/ui/svg/LessonIcon";
 import {UserIcon} from "../../components/ui/svg/UserIcon";
-import WhatsappButton from "../../components/ui/WhatsappButton";
 import "./index.css";
 import { HomeIcon } from "../../components/ui/svg/HomeIcon";
 import { LocationIcon } from "../../components/ui/svg/LocationIcon";
@@ -21,95 +20,109 @@ import { LinkIcon } from "../../components/ui/svg/LinkIcon";
 import { StarIcon } from "../../components/ui/svg/StarIcon";
 import NumericDescriptionCard from "../../components/ui/NumericDescriptionCard";
 import QuoteCard from "../../components/ui/QuoteCard";
-import { whatsappIcon } from "../../components/FakeSVGIcons";
 import MoreInformationForm from "../../components/MoreInformationForm";
 import SocialCard from "../../components/ui/SocialCard";
 import { WhatsAppIcon as WppIcon } from "../../components/ui/svg/WhatsAppIcon";
 import { InstagramIcon } from "../../components/ui/svg/InstagramIcon";
 import { BackgroundOrbs } from "../../components/ui/BackgroundOrbs";
+import { whatsappIcon } from "../../components/FakeSVGIcons";
 
 export default function ProfessionalPage() {
   return (
     <>
       <NavigationMenu />
     
-      <section className=" w-full flex items-center justify-center gap-60 hero">
+      <section className="w-full max-w-screen px-6 md:px-12 flex items-center justify-center hero text-white">
         <BackgroundOrbs />
 
-        <aside className="w-full max-w-150 text-start">
-          <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
-          <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
+        <div className="max-w-max flex items-center justify-center flex-col xl:flex-row gap-30 md:gap-50">
+          <aside className="w-full max-w-150 text-start">
+            <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
 
-          <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
+            <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
-          <div className="mt-9 flex gap-6 border-b border-gray-700 mb-10 pb-15">
-            <WhatsappButton/>
+            <div className="mt-9 flex flex-col sm:flex-row gap-3 border-b border-gray-700 mb-10 pb-15">
+              <Button isFlex={true} className="bg-green-300 flex gap-3 py-4 px-8 justify-center items-center rounded-xl sm:rounded-full text-(--deep) text-sm cursor-pointer font-semibold " type="submit">
+                <div className="h-4 w-4 me-2">
+                  <svg
+                    style={{width: '18px', height: '18px'}}
+                    viewBox={whatsappIcon.viewBox} 
+                    fill={whatsappIcon.fill} 
+                  >
+                    <path d={whatsappIcon.d} />
+                  </svg>
+                </div>
+        
+                Conversar pelo WhatsApp
+              </Button>
 
-            <Button className="py-4 px-8 max-w-max items-center rounded-full border border-gray-600 text-gray-300 text-sm">
-              Ver planos de salas
-            </Button>
+              <Button className="rounded-xl sm:rounded-full py-4 px-8 max-w-full sm:max-w-max items-center  border border-gray-600 text-gray-300 text-sm">
+                Ver planos de salas
+              </Button>
+            </div>
+
+            <div className="flex gap-6 md:gap-15">
+              <div className="text-xs text-gray-500">
+                <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">6</span><br />
+                Salas <br />disponíveis
+              </div>
+              <div className="text-xs text-gray-500">
+                <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">+40</span><br />
+                Profissionais <br />parceiros
+              </div>
+              <div className="text-xs text-gray-500">
+                <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">100%</span><br />
+                Estrutura <br />equipada
+              </div>
+            </div>
+          </aside>
+
+          <div className="hero-panel w-full rounded-4xl flex flex-col p-9 text-gray-400 gap-6 border">
+            <p className="flex items-center justify-center gap-2 text-sm font-bold">
+              <span className="panel-dot"/>
+              Painel do Profissional - Claramente
+            </p>
+
+            <div className="border-b w-full"></div>
+
+            <NotifyToast 
+              icon={<ScheduleIcon />}
+              title="Sala 03 reservada"
+              description="Terça · 14h às 18h"
+              status={true}
+              statusTitle="Confirmado"
+            />
+
+            <NotifyToast 
+              icon={<UserIcon />}
+              title="3 indicações de pacientes"
+              description="Via rede Claramente"
+              status={true}
+              statusTitle="Novo"
+            />
+
+            <NotifyToast 
+              icon={<LessonIcon />}
+              title="Supervisão clínica"
+              description="Quinta · 19h"
+              status={true}
+              statusTitle="Agendaddo"
+            />
+
           </div>
-
-          <div className="flex gap-15">
-            <div className="text-xs text-gray-500">
-              <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">6</span><br />
-              Salas <br />disponíveis
-            </div>
-            <div className="text-xs text-gray-500">
-              <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">+40</span><br />
-              Profissionais <br />parceiros
-            </div>
-            <div className="text-xs text-gray-500">
-              <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">100%</span><br />
-              Estrutura <br />equipada
-            </div>
-          </div>
-        </aside>
-
-        <div className="hero-panel w-95 rounded-4xl flex flex-col p-9 text-gray-400 gap-6 border">
-          <p className="flex items-center justify-center gap-2 text-sm font-bold">
-            <div className="panel-dot"/>
-            Painel do Profissional - Claramente
-          </p>
-
-          <div className="border-b w-full"></div>
-
-          <NotifyToast 
-            icon={<ScheduleIcon />}
-            title="Sala 03 reservada"
-            description="Terça · 14h às 18h"
-            status={true}
-            statusTitle="Confirmado"
-          />
-
-          <NotifyToast 
-            icon={<UserIcon />}
-            title="3 indicações de pacientes"
-            description="Via rede Claramente"
-            status={true}
-            statusTitle="Novo"
-          />
-
-          <NotifyToast 
-            icon={<LessonIcon />}
-            title="Supervisão clínica"
-            description="Quinta · 19h"
-            status={true}
-            statusTitle="Agendaddo"
-          />
-
         </div>
         
       </section>  
 
       {/* Benefits Section */}
-      <section className="py-27.5 px-12 w-screen z-100 benefits flex flex-col items-center">
-        <div className="flex flex-col gap-20 max-w-[1200px]">
-          <div className="flex flex-col items-start text-start w-full">
-            <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
+      <section className="py-27.5 px-6 md:px-12 w-screen z-100 benefits flex flex-col items-center text-white" id="benefits">
+        <div className="flex flex-col gap-20 max-w-[1200px] w-full">
+          <div className="flex flex-col items-center xl:items-start text-start w-full">
+            <h5 className="text-emerald-400 self-start sm:self-center xl:self-start text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Por que a Claramente</h5>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Tudo que você precisa <br />para <i className="text-(--lavender)">exercer com excelência</i></h1>
           </div>
-          <div className="flex gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 m-auto">
             <BenefitsCard
               icon={<HomeIcon />}
               title="Salas Equipadas"
@@ -139,17 +152,17 @@ export default function ProfessionalPage() {
 
       
       {/* subscription Section */}
-      <section className="deep-bg py-27.5 px-12 w-[100vw]screen z-100 flex flex-col items-center">
-        <div className="flex flex-col gap-20">
+      <section className="deep-bg py-27.5 px-6 md:px-12 max-w-screen z-100 flex flex-col items-center text-white" id="salas">
+        <div className="w-full flex flex-col gap-20 max-w-[1200px]">
           <div className="flex flex-col items-start text-start w-full gap-5">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
             <h6 className="text-xs text-gray-400">Flexibilidade para locar por hora, por período ou com pacote mensal. Sem burocracia, sem vínculo empregatício.</h6>
           </div>
 
 
-          <div className="flex gap-6">
+          <div className="flex flex-col xl:flex-row gap-12 xl:gap-6">
             <SubscriptionCard
               icon={<ClockIcon />}
               frequency="Avulso"
@@ -202,19 +215,21 @@ export default function ProfessionalPage() {
       </section>
 
       {/* claramente preview section */}
-      <section className="cred-section py-27.5 px-12 w-screen z-100 flex justify-center items-center">
+      <section className="cred-section py-27.5 px-6 md:px-12 w-screen z-100 flex justify-center items-center text-white" id="rede-claramente">
         <div className="w-full max-w-300 gap-20 flex items-center justify-center">
-          <BrowserScreen 
-            width={'100%'} 
-            height={'100%'} 
-            search="app.claramente.com.br/profissional" 
-            content={<ContentBrowserScreen/>}
-          />
+          <span className="hidden xl:flex flex-1">
+            <BrowserScreen 
+              width={'100%'} 
+              height={'100%'} 
+              search="app.claramente.com.br/profissional" 
+              content={<ContentBrowserScreen/>}
+            />
+          </span>
 
           <aside className="w-full max-w-150 text-start">
             <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Rede Claramente</h5>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Seu perfil visível para
-              <br /><i className="text-(--lavender)">quem está buscando</i>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Seu perfil visível para
+              <br className="hidden md:block"/><i className="text-(--lavender)"> quem está buscando</i>
             </h1>
 
             <p className="leading-[1.85] text-gray-400 mt-4 mb-12">Faça parte da plataforma Claramente e apareça para pacientes que buscam atendimento psicológico na região. Um sistema feito para conectar profissionais e pacientes de forma inteligente.</p>
@@ -237,18 +252,18 @@ export default function ProfessionalPage() {
               description="Painel completo com seus horários, reservas de sala e métricas de visualização do seu perfil na plataforma."
             />
 
-            <div className="flex mt-12 gap-4">
+            <div className="mt-12 gap-4 flex flex-col sm:flex-row">
               <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
-                <Button className="bg-green-300 flex gap-3 py-4 px-8 max-w-max items-center rounded-full text-black text-sm cursor-pointer font-semibold">
-                  <div className="h-4 w-4">
+                <Button isFlex={true} className="bg-green-300 py-4 px-8 w-full sm:max-w-max rounded-xl sm:rounded-full text-black text-sm cursor-pointer font-semibold" >
+                  <div className="h-4 w-4 me-2">
                     <LinkIcon/>
                   </div>
 
-                  Acessar a plataforma
+                  <span>Acessar a plataforma</span>
                 </Button>
               </a>
 
-              <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
+              <Button className="border border-gray-800 py-4 px-8 rounded-xl sm:rounded-full hover:border-gray-700 text-sm cursor-pointer">
                 Tirar dúvidas
               </Button>
             </div>
@@ -257,12 +272,12 @@ export default function ProfessionalPage() {
         </div>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen z-100 flex flex-col items-center">
-        <div className="w-full max-w-300 flex justify-between items-center">
+      <section className="dark-bg py-27.5 px-6 md:px-12 w-screen z-100 flex flex-col items-center text-white" id="supervisao">
+        <div className="w-full max-w-300 flex flex-col xl:flex-row gap-16 xl:gap-6 justify-between items-center">
           <div>
             <div className="flex flex-col items-start text-start w-full gap-5">
               <h5 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Locação de salas</h5>
-              <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
+              <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-5">Escolha o plano <br /><i className="text-(--lavender)">ideal para você</i></h1>
 
               <h6 className="text-2sm text-gray-400 max-w-125 mb-12">A supervisão clínica é um espaço de reflexão, aprendizado e aprimoramento da sua prática. Na Claramente, você nunca atua sozinho.</h6>
             </div>
@@ -292,50 +307,34 @@ export default function ProfessionalPage() {
             <QuoteCard
               quote="Um profissional bem cuidado cuida melhor dos seus pacientes. A supervisão não é um luxo, é uma necessidade ética."
               signature="Equipe Claramente"
-              className="max-w-140"
+              className="max-w-140 italic"
             />
           </aside>
         </div>
         
       </section>
 
-      <section className="deep-bg py-27.5 px-12 w-screen flex flex-col items-center cta-section">
-        <h1 className="font-[Cormorant_Garamond] text-[4.6rem] leading-[1.1] mt-6">
+      <section className="deep-bg py-27.5 px-6 md:px-12 w-screen flex flex-col items-center cta-section text-white">
+        <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">
           Pronto para fazer <br />
-          parte da <i className="text-emerald-200 ">Claramente</i>?
+          parte da <i className="text-emerald-200">Claramente</i>?
         </h1>
         <p className="leading-[1.85] text-gray-400 mt-4 max-w-120">Entre em contato pelo WhatsApp e vamos encontrar juntos o melhor caminho para você começar a atender na clínica.</p>
 
-        <div className="flex mt-12 gap-4">
-          <a href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
-            <Button className="bg-green-300 flex gap-3 py-4 px-8 max-w-max items-center rounded-full text-black text-sm cursor-pointer font-semibold">
-              <div className="h-4 w-4">
-                <svg
-                  style={{width: '18px', height: '18px'}}
-                  viewBox={whatsappIcon.viewBox} 
-                  fill={whatsappIcon.fill} 
-                >
-                  <path d={whatsappIcon.d} />
-                </svg>
-              </div>
-
-              Quero saber mais
-            </Button>
-          </a>
-
+        <a className="flex mt-12 gap-4" href="https://saas-mentor-ten.vercel.app/" target="_blank" rel="noopener">
           <Button className="border border-gray-800 py-4 px-8 rounded-full hover:border-gray-700 text-sm cursor-pointer">
             Acessar a plataforma
           </Button>
-        </div>
+        </a>
       </section>
 
-      <section className="dark-bg py-27.5 px-12 w-screen flex flex-col items-center ">
-        <div className="w-full max-w-300 flex justify-between">
+      <section className="dark-bg py-27.5 px-6 md:px-12 w-screen flex flex-col items-center text-white" id="contato">
+        <div className="w-full max-w-300 flex flex-col-reverse items-center xl:flex-row gap-16 xl:gap-6 justify-between">
           <MoreInformationForm/>
 
           <aside className="w-full max-w-140 text-start">
             <h4 className="text-emerald-400 text-xs tracking-[0.25em] uppercase"><span className="tracking-[-2px] me-2">---</span> Contato Direto</h4>
-            <h1 className="font-[Cormorant_Garamond] text-[3.2rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
+            <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Vamos <i className="text-(--lavender)">conversar</i>
             </h1>
 
             <p className="leading-[1.85] text-gray-400 mt-4 mb-12">Tem alguma dúvida? Quer visitar o espaço? Entre em contato e agendamos uma visita sem compromisso.</p>

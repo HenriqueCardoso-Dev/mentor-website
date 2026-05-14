@@ -39,8 +39,8 @@
 }
 
 .divider-line {
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25), transparent);
+  width: 48px; height: 1px;
+  background: linear-gradient(to left, transparent, rgba(255,255,255,0.25), transparent);
   margin: 28px auto;
 }
 

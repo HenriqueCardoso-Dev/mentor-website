@@ -10,7 +10,7 @@ interface DescriptionCard {
 export default function DescriptionCard({icon, title, description} : DescriptionCard) {
   return (
     <div className="flex gap-6 description-card p-5 rounded-xl border border-transparent">
-      <div className="icon-bg-emerald h-10 w-10 rounded-xl p-2.5 flex">
+      <div className="w-full icon-bg-emerald h-10 max-w-10 rounded-xl p-2.5 flex">
         {icon}
       </div>
 
