@@ -224,6 +224,52 @@ nav.scrolled .nav-link:hover {
   line-height: 1.7;
 }
 
+@media (max-width: 1024px) {
+  .hero-card-float {
+    max-width: 100%;
+    padding: 36px 28px;
+  }
+
+  .hero-card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-card-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-card-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-card-sub {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-card-float {
+    padding: 28px 22px;
+  }
+
+  .hero-card-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-card-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero-card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .hero-card-badge {
   position: absolute;
   top: -16px;

@@ -58,11 +58,11 @@ export default function PacientesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#2D1B4E]">
+    <div className="min-h-screen w-full min-w-screen overflow-x-hidden bg-white text-[#2D1B4E]">
       {/* Navbar */}
       <nav 
         id="mainNav"
-        className="fixed top-0 left-0 right-0 z-100 px-10 py-5 flex items-center justify-between transition-all duration-400"
+        className="fixed top-0 left-0 right-0 z-100 px-6 md:px-10 py-4 md:py-5 flex items-center justify-between transition-all duration-400"
       >
         <a href="/" className="claramente-font text-white text-2xl tracking-[0.06em]">
           Claramente
@@ -86,61 +86,78 @@ export default function PacientesPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero min-h-screen bg-gradient-to-br from-[#3D2470] via-[#6B4FA0] to-[#A08BC8] relative overflow-hidden flex items-center pt-32 pb-16 px-10">
-        <div className="hero-bg-circles absolute inset-0 pointer-events-none">
+      <section className="hero w-screen min-w-screen min-h-screen bg-gradient-to-br from-[#3D2470] via-[#6B4FA0] to-[#A08BC8] relative overflow-hidden flex items-center pt-24 pb-12 px-6 md:px-10 lg:pt-32 lg:pb-16">
+        <div className="hero-bg-circles absolute inset-0 pointer-events-none hidden lg:block">
           <div className="absolute top-[-80px] right-[-80px] w-[500px] h-[500px] rounded-full bg-gradient-to-b from-[rgba(120,191,160,0.18)] to-transparent"></div>
           <div className="absolute bottom-[-120px] left-[-60px] w-[600px] h-[600px] rounded-full bg-gradient-to-t from-[rgba(255,255,255,0.06)] to-transparent"></div>
         </div>
 
-        <div className="w-screen flex items-center justify-center relative z-10">
-          <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="w-full flex items-center justify-center relative z-10">
+          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Content */}
-            <div className="text-white">
-              <div className="hero-eyebrow flex items-center gap-3 mb-6">
+            <div className="text-white max-w-xl mx-auto lg:mx-0">
+              <div className="hero-eyebrow inline-flex items-center justify-center lg:justify-start gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 font-semibold text-sm tracking-[0.35em] uppercase mb-6">
                 Clínica de Psicologia — Itaquaquecetuba
               </div>
-              <h1 className="claramente-font text-5xl lg:text-7xl font-light leading-tight mb-6 text-start">
-                Um espaço para<br />cuidar da sua<br />saúde <em className="italic text-[#A8D8C4]">mental</em>
+
+              <div className="sm:hidden mt-8 mb-10">
+                <div className="hero-card-float relative mx-auto w-full max-w-[260px] px-4 py-4">
+                  <div className="absolute top-3 right-3 hero-card-badge text-[0.65rem] px-2 py-1">
+                    Disponível
+                  </div>
+                  <div className="hero-card-icon mx-auto">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5">
+                      <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <div className="hero-card-title text-center text-[1.2rem] leading-tight mb-2 whitespace-nowrap sm:whitespace-normal">Cuide da sua mente hoje</div>
+                  <div className="hero-card-sub text-center text-[0.9rem]">
+                    Um primeiro passo pode mudar tudo. Agende sua consulta e comece sua jornada.
+                  </div>
+                </div>
+              </div>
+
+              <h1 className="hero-title claramente-font text-[2.1rem] sm:text-[2.6rem] md:text-4xl lg:text-[4.75rem] font-light leading-[1.02] mb-6 text-center lg:text-start whitespace-nowrap sm:whitespace-normal max-w-full overflow-hidden text-ellipsis">
+                Um espaço para cuidar da sua saúde <em className="italic text-[#A8D8C4]">mental</em>
               </h1>
-              <p className="text-xs text-start font-light text-white/80 leading-relaxed mb-10 max-w-md">
+              <p className="text-sm sm:text-base text-center lg:text-start font-light text-white/80 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
                 Atendimento humanizado, acolhedor e profissional. Aqui você encontra um lugar seguro para se reconectar consigo mesmo e florescer.
               </p>
 
-              <div className="flex gap-4 flex-wrap items-center mb-14">
+              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-center justify-center lg:justify-start mb-10">
                 <a 
                   href="https://wa.me/+5511982829179" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-primary w-full sm:w-auto justify-center"
                 >
                   <i className="h-5 w-5">
                     <WhatsAppIcon fill='currentcolor'/>
                   </i>
                   Agendar pelo WhatsApp
                 </a>
-                <a href="#servicos" className="btn-outline">
+                <a href="#servicos" className="btn-outline w-full sm:w-auto text-center">
                   Ver serviços
                 </a>
               </div>
 
-              {/* Trust Stats */}
-              <div className="hero-trust flex gap-8">
-                <div className="text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+                <div className="rounded-3xl bg-white/10 p-4 text-center">
                   <div className="claramente-font text-3xl font-semibold text-[#A8D8C4]">+5</div>
-                  <div className="text-xs text-white/60 font-light mt-1">Anos de<br />experiência</div>
+                  <div className="text-xs text-white/75 font-light mt-2 leading-5">Anos de<br />experiência</div>
                 </div>
-                <div className="text-center">
+                <div className="rounded-3xl bg-white/10 p-4 text-center">
                   <div className="claramente-font text-3xl font-semibold text-[#A8D8C4]">+300</div>
-                  <div className="text-xs text-white/60 font-light mt-1">Pacientes<br />atendidos</div>
+                  <div className="text-xs text-white/75 font-light mt-2 leading-5">Pacientes<br />atendidos</div>
                 </div>
-                <div className="text-center">
+                <div className="rounded-3xl bg-white/10 p-4 text-center">
                   <div className="claramente-font text-3xl font-semibold text-[#A8D8C4]">100%</div>
-                  <div className="text-xs text-white/60 font-light mt-1">Atendimento<br />humanizado</div>
+                  <div className="text-xs text-white/75 font-light mt-2 leading-5">Atendimento<br />humanizado</div>
                 </div>
               </div>
             </div>
 
-            {/* Hero Card */}
+            {/* Hero Card Desktop */}
             <div className="hidden lg:flex justify-center items-center">
               <div className="hero-card-float relative">
                 <div className="absolute top-5 right-5 hero-card-badge">
@@ -162,9 +179,9 @@ export default function PacientesPage() {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-24 px-10 bg-[#F7F4FA]">
+      <section id="sobre" className="py-24 px-6 md:px-10 bg-[#F7F4FA]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
             {/* Visual - Placeholder */}
             <div className="fade-up hidden lg:block">
               <div className="about-img-wrap h-96 rounded-3xl bg-gradient-to-br from-[#A08BC8] to-[#6B4FA0] flex items-center justify-center text-center p-10">
@@ -184,18 +201,18 @@ export default function PacientesPage() {
             {/* Text Content */}
             <div className="fade-up">
               <div className="section-eyebrow">Sobre a Clínica</div>
-              <h2 className="section-title text-start">
+              <h2 className="section-title text-center lg:text-start">
                 Um lugar onde você é <em className="italic">bem-vindo</em>
               </h2>
-              <p className="section-lead text-start">
+              <p className="section-lead text-center lg:text-start">
                 A Claramente é uma clínica de psicologia criada com o propósito de oferecer atendimento humanizado e de qualidade. Acreditamos que cada pessoa tem uma história única e merece ser ouvida com atenção, empatia e respeito.
               </p>
-              <p className="section-lead mt-4 text-start">
+              <p className="section-lead mt-4 text-center lg:text-start">
                 Nossa missão é proporcionar um espaço seguro e acolhedor onde você possa se expressar livremente e encontrar o equilíbrio emocional que tanto busca.
               </p>
 
               {/* Values Grid */}
-              <div className="grid grid-cols-2 gap-4 mt-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
                 <div className="value-item text-start">
                   <div className="text-2xl mb-2">🌿</div>
                   <div className="value-title">Acolhimento</div>
@@ -223,14 +240,14 @@ export default function PacientesPage() {
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-24 px-10 bg-white">
+      <section id="servicos" className="py-24 px-6 md:px-10 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-10 lg:gap-12 mb-16">
             <div>
               <div className="section-eyebrow fade-up">Serviços</div>
-              <h2 className="section-title fade-up">O que <em className="italic">oferecemos</em></h2>
+              <h2 className="section-title fade-up text-center lg:text-start">O que <em className="italic">oferecemos</em></h2>
             </div>
-            <p className="section-lead fade-up max-w-xs text-end">
+            <p className="section-lead fade-up max-w-xs lg:max-w-xs text-center lg:text-end mx-auto lg:mx-0">
               Atendimento especializado para diferentes fases e necessidades da vida.
             </p>
           </div>
@@ -268,14 +285,14 @@ export default function PacientesPage() {
       </section>
 
       {/* Approach Section */}
-      <section id="abordagem" className="py-24 px-10 bg-[#F7F4FA]">
+      <section id="abordagem" className="py-24 px-6 md:px-10 bg-[#F7F4FA]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
             {/* Steps */}
             <div className="fade-up">
               <div className="section-eyebrow">Nossa Abordagem</div>
-              <h2 className="section-title">Como funciona o <em className="italic">processo</em></h2>
-              <p className="section-lead">Um caminho cuidadoso, respeitoso e adaptado à sua realidade.</p>
+              <h2 className="section-title text-center lg:text-start">Como funciona o <em className="italic">processo</em></h2>
+              <p className="section-lead text-center lg:text-start">Um caminho cuidadoso, respeitoso e adaptado à sua realidade.</p>
 
               <div className="approach-steps mt-10">
                 {steps.map((step, index) => (
@@ -291,7 +308,7 @@ export default function PacientesPage() {
             </div>
 
             {/* Quote Card */}
-            <div className="fade-up flex justify-center items-center">
+            <div className="fade-up flex justify-center items-center mt-10 lg:mt-0">
               <div className="fade-up">
                 <QuoteCard
                   quote="Não existe um roteiro único para a saúde mental. Cada jornada é construída com cuidado, no tempo certo de cada pessoa."
@@ -306,11 +323,11 @@ export default function PacientesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-24 px-10 bg-white">
+      <section id="depoimentos" className="py-24 px-6 md:px-10 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <div className="section-eyebrow fade-up">Depoimentos</div>
-            <h2 className="section-title fade-up text-start">O que nossos pacientes <em className="italic">dizem</em></h2>
+            <h2 className="section-title fade-up text-center lg:text-start">O que nossos pacientes <em className="italic">dizem</em></h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -342,9 +359,9 @@ export default function PacientesPage() {
       </section>
 
       {/* CTA Band */}
-      <section className="cta-band py-24 px-10 text-center relative overflow-hidden">
+      <section className="cta-band py-24 px-6 md:px-10 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="claramente-font text-4xl lg:text-5xl font-light text-white mb-6 leading-tight">
+          <h2 className="claramente-font text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-6 leading-tight">
             Pronto para dar o<br />primeiro <em className="italic text-[#A8D8C4]">passo</em>?
           </h2>
           <p className="text-lg font-light text-white/75 mb-10">
@@ -371,14 +388,14 @@ export default function PacientesPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-24 px-10 bg-[#F7F4FA]">
+      <section id="contato" className="py-24 px-6 md:px-10 bg-[#F7F4FA]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Form */}
             <div className="fade-up contact-form">
               <h3 className="claramente-font text-2xl font-light mb-8">Envie uma mensagem</h3>
               <form onSubmit={handleForm} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="form-group text-start">
                     <label htmlFor="nome">Nome</label>
                     <input 
@@ -446,8 +463,8 @@ export default function PacientesPage() {
             {/* Contact Info */}
             <div className="fade-up contact-info">
               <div className="section-eyebrow">Contato</div>
-              <h2 className="section-title text-start">Fale <em className="italic">conosco</em></h2>
-              <p className="section-lead text-start">
+              <h2 className="section-title text-center lg:text-start">Fale <em className="italic">conosco</em></h2>
+              <p className="section-lead text-center lg:text-start">
                 Estamos prontos para atender você. Escolha o canal de sua preferência e entre em contato.
               </p>
 
