@@ -3,7 +3,11 @@ import Button from './ui/Button';
 import './styles/Buttons.css'
 import { useEffect, useState } from 'react';
 
-export default function NavigationMenu() {
+interface NavigationMenuProps {
+  badgeText?: string;
+}
+
+export default function NavigationMenu({ badgeText }: NavigationMenuProps) {
 
   const [ativo, setAtivo] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -51,19 +55,20 @@ export default function NavigationMenu() {
               tracking-[0.08em]
               no-underline
           ">Claramente</a>
-          <span
-            className="
-              nav-badge
-              text-[0.55rem]
-              tracking-[0.15em]
-              uppercase
+          {badgeText && (
+            <span
+              className="
+                nav-badge
+                text-[0.55rem]
+                tracking-[0.15em]
+                uppercase
               text-emerald-600
               py-[6px]
               px-[12px]
               rounded-[50px]
               border-[1px]
               ml-6
-          " >Para Profissionais</span>
+          " >{badgeText}</span>)}
         </div>
       </div>
 
@@ -93,7 +98,7 @@ export default function NavigationMenu() {
       {/* Mobile Menu */}
       <div className={`xl:hidden absolute top-full left-0 right-0 bg-[#1a1030e9] flex flex-col items-center py-4 space-y-4 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
         {navLinks.map((link, index) => (
-          <a key={index} href={link.href} className='text-gray-400 hover:text-white font-bold' onClick={() => setIsOpen(false)}>
+          <a key={index} href={link.href} className='text-white hover:text-gray-300 font-bold' onClick={() => setIsOpen(false)}>
             {link.text}
           </a>
         ))}

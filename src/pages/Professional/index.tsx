@@ -30,7 +30,7 @@ import { whatsappIcon } from "../../components/FakeSVGIcons";
 export default function ProfessionalPage() {
   return (
     <>
-      <NavigationMenu />
+      <NavigationMenu badgeText="Para Profissionais" />
     
       <section className="w-full max-w-screen px-6 md:px-12 flex items-center justify-center hero text-white">
         <BackgroundOrbs />
@@ -40,9 +40,9 @@ export default function ProfessionalPage() {
             <h5 className="text-emerald-400 text-xs tracking-[0.25em]"><span className="tracking-[-2px] me-2">---</span> PARA PROFISSIONAIS DE PSICOLOGIA</h5>
             <h1 className="font-[Cormorant_Garamond] text-[3rem] md:text-[5rem] leading-[1.1] mt-6">Seu consultório, <br /> no lugar <i className="text-emerald-400 ">certo</i></h1>
 
-            <p className="leading-[1.85] text-gray-400 mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
+            <p className="leading-[1.85] text-white mt-4">Salas equipadas, endereço profissional, supervisão clínica e uma rede de credenciamento que conecta você a novos pacientes. <br />Tudo na Claramente.</p>
 
-            <div className="mt-9 flex flex-col sm:flex-row gap-3 border-b border-gray-700 mb-10 pb-15">
+            <div className="mt-9 flex flex-col sm:flex-row gap-3 border-b border-white mb-10 pb-15">
               <Button isFlex={true} className="bg-green-300 flex gap-3 py-4 px-8 justify-center items-center rounded-xl sm:rounded-full text-(--deep) text-sm cursor-pointer font-semibold " type="submit">
                 <div className="h-4 w-4 me-2">
                   <svg
@@ -57,28 +57,28 @@ export default function ProfessionalPage() {
                 Conversar pelo WhatsApp
               </Button>
 
-              <Button className="rounded-xl sm:rounded-full py-4 px-8 max-w-full sm:max-w-max items-center  border border-gray-600 text-gray-300 text-sm">
+              <Button className="rounded-xl sm:rounded-full py-4 px-8 max-w-full sm:max-w-max items-center  border border-white text-white text-sm cursor-pointer">
                 Ver planos de salas
               </Button>
             </div>
 
             <div className="flex gap-6 md:gap-15">
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-white">
                 <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">6</span><br />
                 Salas <br />disponíveis
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-white">
                 <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">+40</span><br />
                 Profissionais <br />parceiros
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-white">
                 <span className="font-[Cormorant_Garamond] text-[2.4rem] text-emerald-500">100%</span><br />
                 Estrutura <br />equipada
               </div>
             </div>
           </aside>
 
-          <div className="hero-panel w-full rounded-4xl flex flex-col p-9 text-gray-400 gap-6 border">
+          <div className="hero-panel w-full rounded-4xl flex flex-col p-9 text-gray-300 gap-6 border">
             <p className="flex items-center justify-center gap-2 text-sm font-bold">
               <span className="panel-dot"/>
               Painel do Profissional - Claramente

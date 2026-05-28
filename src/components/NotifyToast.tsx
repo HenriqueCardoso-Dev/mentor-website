@@ -26,7 +26,7 @@ export default function NotifyToast({
       </div>
       <div className="flex flex-col gap-1 items-start">
         <h5 className="text-xs font-bold text-gray-300 text-start">{title}</h5>
-        <p className="text-xs text-gray-500 text-start">
+        <p className="text-xs text-gray-300 text-start">
           {description}
         </p>
       </div>
